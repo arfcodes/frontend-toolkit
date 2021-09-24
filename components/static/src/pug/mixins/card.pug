@@ -1,0 +1,65 @@
+//-
+//- Card info mixin
+mixin card__info(title, info, url, category, icon)
+  .card__info
+    .card__info__inner
+      if icon
+        .card__icon
+          img(src=icon alt="")
+
+      .card__info__main
+        if category
+          .card__category.category
+            span.category__main= category
+        
+        .card__title
+          if url
+            h3.card__title__main.text--lg
+              a(href=url)= title
+          else
+            h3.card__title__main.text--lg= title
+
+        if info
+          .card__desc
+            p= info
+
+    .card__deco
+      span.card__deco__icon
+
+//-
+//- Card thumb mixin
+mixin card__thumb(image)
+  .card__thumb
+    .card__thumb__image
+      img(src=image alt="")
+
+//-
+//- Card content mixin
+mixin card__content(title, info, image, url, category, tag, icon, tagColor = 'primary')
+  .card__inner
+    if image
+      +card__thumb(image)
+    if tag
+      div(class="card__tag bg--"+tagColor)= tag
+    +card__info(title, info, url, category, icon)
+
+//-
+//- Card mixin
+mixin card(title, info, image, url, category, tag, icon, infoPos = 'inside', tagColor = 'primary')
+  div(class='card card--info-' + infoPos)
+    +card__content(title, info, image, url, category, tag, icon, tagColor)
+
+//-
+//- Card menu mixin
+mixin card-menu(label, image, url)
+  .card.card__menu
+    a(href=url)
+      .card__inner
+        +card__thumb(image)
+        .card__info
+          p
+            strong.text--xl= label
+
+      .card__deco
+        span.card__deco__icon
+    

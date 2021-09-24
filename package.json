@@ -21,7 +21,11 @@
     "toolkit",
     "components"
   ],
-  "scripts": {},
+  "scripts": {
+    "static:dev": "yarn workspace web-static-components develop",
+    "static:prod": "yarn workspace web-static-components build",
+    "react:dev": "yarn workspace react-components develop"
+  },
 
   "circular-dependency-plugin": "^5.2.2",
   "compression-webpack-plugin": "^7.1.2",

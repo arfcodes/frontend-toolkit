@@ -20,10 +20,8 @@
     "components"
   ],
   "scripts": {
-    "start": "npm run serve",
-    "dev": "grunt watch",
     "build": "grunt build",
-    "serve": "grunt serve"
+    "develop": "grunt serve"
   },
   "devDependencies": {
     "@lodder/grunt-postcss": "^3.0.0",

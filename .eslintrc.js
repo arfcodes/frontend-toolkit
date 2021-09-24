@@ -31,9 +31,10 @@ module.exports = {
     'import/no-dynamic-require': 0,
     'import/no-extraneous-dependencies': 0,
     'import/no-named-as-default': 0,
-    'import/no-unresolved': 2,
+    'import/no-unresolved': 0,
     'import/no-webpack-loader-syntax': 0,
     'import/prefer-default-export': 0,
+    'import/extensions': 0,
     indent: [
       2,
       2,
@@ -78,11 +79,11 @@ module.exports = {
     'react/sort-comp': 0,
     'require-yield': 0,
   },
-  settings: {
-    'import/resolver': {
-      webpack: {
-        config: './webpack/webpack.prod.config.js',
-      },
-    },
-  },
+  // settings: {
+  //   'import/resolver': {
+  //     webpack: {
+  //       config: './scripts/webpack/webpack.prod.config.js',
+  //     },
+  //   },
+  // },
 };
