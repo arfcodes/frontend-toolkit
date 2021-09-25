@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom';
 import Test from '@/Test';
 
 // Import styles
-// import './styles/styles.scss';
+import '../../scss/src/_all.scss';
 
 const App = () => (
   <div>
