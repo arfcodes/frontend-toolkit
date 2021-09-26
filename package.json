@@ -14,7 +14,7 @@
   },
   "engines": {
     "npm": ">=7",
-    "node": ">=14 <=15"
+    "node": "14"
   },
   "keywords": [
     "frontend",
@@ -22,9 +22,10 @@
     "components"
   ],
   "scripts": {
-    "static:dev": "yarn workspace web-static-components develop",
-    "static:prod": "yarn workspace web-static-components build",
-    "react:dev": "yarn workspace react-components develop",
+    "dev:static": "yarn workspace web-static-components develop",
+    "dev:react": "yarn workspace react-components develop",
+    "dev:main": "concurrently \"yarn dev:static\" \"yarn dev:react\"",
+    "build:static": "yarn workspace web-static-components build",
     "commit": "git-cz"
   },
   "circular-dependency-plugin": "^5.2.2",
@@ -115,6 +116,7 @@
   },
   "workspaces": [
     "packages/*",
-    "components/*"
+    "components/*",
+    "docs"
   ]
 }

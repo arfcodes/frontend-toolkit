@@ -11,16 +11,23 @@ import navs from '../../../../assets/data/navigation.json';
   const menuRootEl = rootEl.querySelector('.d-menu__content__main');
 
   // Open
-  rootEl.querySelector('.d-menu__button').addEventListener('click', () => {
+  rootEl.querySelector('.d-menu__button').addEventListener('click', (evt) => {
+    evt.stopPropagation();
     rootEl.setAttribute('data-state', 'open');
   });
 
   // Close
   rootEl
     .querySelector('.d-menu__close button')
-    .addEventListener('click', () => {
+    .addEventListener('click', (evt) => {
+      evt.stopPropagation();
       rootEl.setAttribute('data-state', 'close');
     });
+
+  // Close body
+  document.querySelector('*').addEventListener('click', () => {
+    rootEl.setAttribute('data-state', 'close');
+  });
 
   //
   // Build navigation
@@ -38,6 +45,7 @@ import navs from '../../../../assets/data/navigation.json';
 
     nodeA.setAttribute('href', `${rootUrl}/${item.id}.html`);
     nodeA.setAttribute('data-id', item.id);
+    nodeA.addEventListener('click', (evt) => evt.stopPropagation());
 
     nodeA.appendChild(nodeTxt);
     nodeLi.appendChild(nodeA);

@@ -89,10 +89,13 @@ module.exports = {
     }),
   ],
   resolve: {
-    modules: ['node_modules', 'src'],
+    modules: ['node_modules', 'src', '../../node_modules'],
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
       '@': path.join(__dirname, '/src'),
+      '@root': path.join(__dirname, '../..'),
+      '@rootImages': path.join(__dirname, '../../assets/images'),
+      '@rootData': path.join(__dirname, '../../assets/data'),
       '@demo': path.join(__dirname, '/demo'),
     },
   },

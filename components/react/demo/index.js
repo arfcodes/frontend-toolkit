@@ -4,16 +4,12 @@ import '@babel/polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Test from '@/Test';
+import App from './includes/App';
 
-// Import styles
+// Import framework styles
 import '../../scss/src/_all.scss';
-
-const App = () => (
-  <div>
-    <Test />
-  </div>
-);
+// Import demo styles
+import '../../static/demo/styles/_demo.scss';
 
 // Main APP init
 ReactDOM.render(<App />, document.getElementById('app'));
