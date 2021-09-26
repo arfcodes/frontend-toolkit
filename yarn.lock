@@ -2514,6 +2514,11 @@ browserify-aes@^1.0.0, browserify-aes@^1.0.4:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+browserify-alias-grunt@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/browserify-alias-grunt/-/browserify-alias-grunt-0.1.0.tgz#20abe603e7c296f53d6eac6cc46b9c21b5fc0c18"
+  integrity sha1-IKvmA+fClvU9bqxsxGucIbX8DBg=
+
 browserify-cache-api@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/browserify-cache-api/-/browserify-cache-api-3.0.1.tgz#96247e853f068fd6e0d45cc73f0bb2cd9778ef02"

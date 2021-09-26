@@ -9,6 +9,8 @@ function resolve(dir) {
 module.exports = function (grunt) {
   'use strict';
 
+  // var alias = require("browserify-alias-grunt");
+
   //
   //Grunt config
   var gruntConfig = {
@@ -19,7 +21,7 @@ module.exports = function (grunt) {
         '/*! <%= pkg.name %> - v<%= pkg.version %> - built on <%= grunt.template.today("dd-mm-yyyy") %> */\n',
       style_src: 'demo/styles/',
       style_dist: 'demo/dist/css/',
-      js_src: 'src/js/',
+      js_src: 'demo/js/',
       js_dist: 'demo/dist/js/',
       pug_src: 'demo/pug/',
       pug_dist: 'demo/dist/',
@@ -28,7 +30,7 @@ module.exports = function (grunt) {
     browserify: {
       main: {
         options: {
-          transform: [['babelify', { presets: ['@babel/env'] }]],
+          transform: [['babelify', { presets: ['@babel/env'] }]]
         },
         files: [
           {
@@ -121,6 +123,19 @@ module.exports = function (grunt) {
       },
     },
 
+    copy: {
+      assets: {
+        files: [
+          {
+            expand: true,
+            cwd: '../../assets/images',
+            src: '**',
+            dest: 'demo/dist/assets',
+          },
+        ],
+      },
+    },
+
     watch: {
       options: {
         spawn: false,
@@ -136,7 +151,10 @@ module.exports = function (grunt) {
         tasks: ['sass'],
       },
       script: {
-        files: ['<%= meta.js_src %>/**/*.js'],
+        files: [
+          '<%= meta.js_src %>/**/*.js',
+          'demo/js/**/*.js'
+        ],
         tasks: ['browserify'],
       },
       pug: {
@@ -177,7 +195,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-pug');
-  // grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -189,6 +207,7 @@ module.exports = function (grunt) {
   //
   grunt.registerTask('build', [
     'clean:dev',
+    'copy',
     'sass',
     'postcss',
     'pug',

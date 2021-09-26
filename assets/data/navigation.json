@@ -1,0 +1,18 @@
+[
+  {
+    "id": "box",
+    "label": "Box"
+  },
+  {
+    "id": "button",
+    "label": "Button"
+  },
+  {
+    "id": "card",
+    "label": "Card"
+  },
+  {
+    "id": "layout",
+    "label": "Layout"
+  }
+]

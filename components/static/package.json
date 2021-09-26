@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@lodder/grunt-postcss": "^3.0.0",
+    "browserify-alias-grunt": "^0.1.0",
     "grunt": "^1.3.0",
     "grunt-babel": "^8.0.0",
     "grunt-browserify": "^6.0.0",
