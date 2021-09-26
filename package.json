@@ -26,6 +26,9 @@
     "dev:react": "yarn workspace react-components develop",
     "dev:main": "concurrently \"yarn dev:static\" \"yarn dev:react\"",
     "build:static": "yarn workspace web-static-components build",
+    "docs:dev": "yarn workspace docs start",
+    "docs:serve": "yarn workspace docs serve",
+    "docs:build": "yarn workspace docs build",
     "commit": "git-cz"
   },
   "circular-dependency-plugin": "^5.2.2",
