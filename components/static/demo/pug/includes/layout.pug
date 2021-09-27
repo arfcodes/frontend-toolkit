@@ -1,10 +1,12 @@
 //- Include all mixins
 include ../../../src/pug/mixins
+include ../mixins/text
 
 block vars
   - var pageTitle     = 'Demo Static Component';
   - var pageName      = 'home';
   - var bodyClass     = 'home';
+  - var subpath       = false;
 
 doctype html
 html(lang="en")
@@ -24,7 +26,10 @@ html(lang="en")
     //- Additional styles
     block styles
 
-    link(rel="stylesheet", href="css/main.css")
+    if subpath
+      link(rel="stylesheet", href="../css/main.css")
+    else
+      link(rel="stylesheet", href="css/main.css")
 
     //- Additional scripts
     block head_scripts
@@ -34,23 +39,33 @@ html(lang="en")
       .d-menu__trigger
         button.d-menu__button(type="button")
           i.d-menu__button__icon
-            img(src="assets/icon__menu.svg" alt="Menu")
+            if subpath
+              img(src="../assets/icon__menu.svg" alt="Menu")
+            else
+              img(src="assets/icon__menu.svg" alt="Menu")
+  
           strong.d-menu__button__label Menu
 
       .d-menu__content
         .d-menu__content__inner
           .d-menu__close
             button(type="button")
-              img(src="assets/icon__close.svg" alt="Close")
+              if subpath
+                img(src="../assets/icon__close.svg" alt="Close")
+              else
+                img(src="assets/icon__close.svg" alt="Close")
 
           .d-menu__content__main
             ul
 
     
-    main.main
+    main.d-main
       //-
       //- Site content
       //-
       block main
 
-    script(src='js/main.js')
+    if subpath
+      script(src='../js/main.js')
+    else
+      script(src='js/main.js')

@@ -1,0 +1,102 @@
+
+extends ../../includes/layout
+
+block vars
+  - var pageTitle      = 'Layout - Switcher | Demo Static Components';
+  - var pageName       = 'layout';
+  - var bodyClass      = 'layout';
+  - var subpath        = true;
+
+block main
+
+  .container.container--full
+    h2 .container.container--full
+
+    .d-block.bg--primary.text--white
+      +text-sample
+  
+  br
+  br
+  br
+  .container.container--full
+    h2 .switcher
+    .switcher 
+      .switcher__row
+        .switcher__column
+          .switcher__inner
+            .d-block.bg--primary.text--white
+              +text-sample-short
+        .switcher__column
+          .switcher__inner
+            .d-block.bg--primary.text--white
+              +text-sample-short
+        .switcher__column
+          .switcher__inner
+            .d-block.bg--primary.text--white
+              +text-sample-short
+  
+  br
+  br
+  br
+  .container.container--md
+    h2 .container.container--md
+
+    .d-block.bg--primary.text--white
+      +text-sample
+  
+  br
+  br
+  br
+  .container.container--md
+    h2 .switcher.switcher--no-space
+    .switcher.switcher--no-space
+      .switcher__row
+        .switcher__column
+          .d-block.bg--primary.text--white
+            +text-sample-short
+        .switcher__column
+          .d-block.bg--primary.text--white
+            +text-sample-short
+        .switcher__column
+          .d-block.bg--primary.text--white
+            +text-sample-short
+  
+  br
+  br
+  br
+  .container.container--sm
+    h2 .switcher.switcher--50
+    .switcher.switcher--50
+      .switcher__row
+        .switcher__column
+          .switcher__inner
+            .d-block.bg--primary.text--white
+              +text-sample-short
+        .switcher__column
+          .switcher__inner
+            .d-block.bg--primary.text--white
+              +text-sample-short
+  
+  br
+  br
+  br
+  .container.container--full
+    h2 .switcher.switcher--25
+    .switcher.switcher--25
+      .switcher__row
+        .switcher__column
+          .switcher__inner
+            .d-block.bg--primary.text--white
+              +text-sample-short
+        .switcher__column
+          .switcher__inner
+            .d-block.bg--primary.text--white
+              +text-sample-short
+        .switcher__column
+          .switcher__inner
+            .d-block.bg--primary.text--white
+              +text-sample-short
+        .switcher__column
+          .switcher__inner
+            .d-block.bg--primary.text--white
+              +text-sample-short

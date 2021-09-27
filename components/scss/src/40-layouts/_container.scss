@@ -1,15 +1,45 @@
 //- 40-layouts/container
 
+$space: 5vw;
+
+// Mixins
+@mixin make-container-fluid-right($max-width) {
+  $media-width: $max-width + $max-width * 0.05;
+  padding-left: calc((100% - #{$max-width}) / 2);
+  width: calc(100% - ((100% - #{$max-width}) / 2));
+
+  @media (max-width: #{$media-width}) {
+    padding-left: #{$space};
+    padding-right: #{$space};
+    width: auto;
+  }
+}
+
+@mixin make-container-fluid-left($max-width) {
+  $media-width: $max-width + $max-width * 0.05;
+  padding-right: calc((100% - #{$max-width}) / 2);
+  width: calc(100% - ((100% - #{$max-width}) / 2));
+
+  @media (max-width: #{$media-width}) {
+    padding-left: #{$space};
+    padding-right: #{$space};
+    width: auto;
+  }
+}
+
 .container {
   box-sizing: content-box /* 1 */;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 5vw;
-  padding-right: 5vw;
-  max-width: #{$container-size-md};
+  padding-left: #{$space};
+  padding-right: #{$space};
 
   &--lg {
 	  max-width: #{$container-size-lg};
+  }
+
+  &--md {
+    max-width: #{$container-size-md};
   }
 
   &--sm {
@@ -18,5 +48,49 @@
 
   &--xs {
 	  max-width: #{$container-size-xs};
+  }
+
+  &--full {
+    max-width: none;
+  }
+
+  &--fluid-right {
+    max-width: 100%;
+
+    &.container--md {
+      @include make-container-fluid-right($container-size-md);
+    }
+
+    &.container--lg {
+      @include make-container-fluid-right($container-size-lg);
+    }
+
+    &.container--sm {
+      @include make-container-fluid-right($container-size-sm);
+    }
+
+    &.container--xs {
+      @include make-container-fluid-right($container-size-xs);
+    }
+  }
+
+  &--fluid-left {
+    max-width: 100%;
+
+    &.container--md {
+      @include make-container-fluid-left($container-size-md);
+    }
+
+    &.container--lg {
+      @include make-container-fluid-left($container-size-lg);
+    }
+
+    &.container--sm {
+      @include make-container-fluid-left($container-size-sm);
+    }
+
+    &.container--xs {
+      @include make-container-fluid-left($container-size-xs);
+    }
   }
 }

@@ -23,7 +23,7 @@ module.exports = function (grunt) {
       style_dist: 'demo/dist/css/',
       js_src: 'demo/js/',
       js_dist: 'demo/dist/js/',
-      pug_src: 'demo/pug/',
+      pug_src: 'demo/pug/pages/',
       pug_dist: 'demo/dist/',
     },
 

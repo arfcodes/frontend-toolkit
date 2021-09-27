@@ -122,6 +122,18 @@
   line-height: 1.2;
 }
 
+/**
+From: https://design-system.w3.org/
+
+This mixin allows us to add vertical spacing between a container's direct children,
+much like the 'axiomatic owl' technique but limited to specific use cases.
+
+By applying Flexbox to the parent container, we can use auto margin on a specific
+child element. This way, we can choose to group elements inside the stack to the
+top/bottom of the vertical space, which is useful for card-like components.
+
+Use with a specific measure, or without for the default measure, e.g.
+*/
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -484,9 +496,465 @@ p {
   line-height: 1.8;
 }
 
+.container {
+  box-sizing: content-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+.container--lg {
+  max-width: 82rem;
+}
+.container--md {
+  max-width: 70rem;
+}
+.container--sm {
+  max-width: 62rem;
+}
+.container--xs {
+  max-width: 54rem;
+}
+.container--full {
+  max-width: none;
+}
+.container--fluid-right {
+  max-width: 100%;
+}
+.container--fluid-right.container--md {
+  padding-left: calc((100% - 70rem) / 2);
+  width: calc(100% - (100% - 70rem) / 2);
+}
+@media (max-width: 73.5rem) {
+  .container--fluid-right.container--md {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: auto;
+  }
+}
+.container--fluid-right.container--lg {
+  padding-left: calc((100% - 82rem) / 2);
+  width: calc(100% - (100% - 82rem) / 2);
+}
+@media (max-width: 86.1rem) {
+  .container--fluid-right.container--lg {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: auto;
+  }
+}
+.container--fluid-right.container--sm {
+  padding-left: calc((100% - 62rem) / 2);
+  width: calc(100% - (100% - 62rem) / 2);
+}
+@media (max-width: 65.1rem) {
+  .container--fluid-right.container--sm {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: auto;
+  }
+}
+.container--fluid-right.container--xs {
+  padding-left: calc((100% - 54rem) / 2);
+  width: calc(100% - (100% - 54rem) / 2);
+}
+@media (max-width: 56.7rem) {
+  .container--fluid-right.container--xs {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: auto;
+  }
+}
+.container--fluid-left {
+  max-width: 100%;
+}
+.container--fluid-left.container--md {
+  padding-right: calc((100% - 70rem) / 2);
+  width: calc(100% - (100% - 70rem) / 2);
+}
+@media (max-width: 73.5rem) {
+  .container--fluid-left.container--md {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: auto;
+  }
+}
+.container--fluid-left.container--lg {
+  padding-right: calc((100% - 82rem) / 2);
+  width: calc(100% - (100% - 82rem) / 2);
+}
+@media (max-width: 86.1rem) {
+  .container--fluid-left.container--lg {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: auto;
+  }
+}
+.container--fluid-left.container--sm {
+  padding-right: calc((100% - 62rem) / 2);
+  width: calc(100% - (100% - 62rem) / 2);
+}
+@media (max-width: 65.1rem) {
+  .container--fluid-left.container--sm {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: auto;
+  }
+}
+.container--fluid-left.container--xs {
+  padding-right: calc((100% - 54rem) / 2);
+  width: calc(100% - (100% - 54rem) / 2);
+}
+@media (max-width: 56.7rem) {
+  .container--fluid-left.container--xs {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: auto;
+  }
+}
+
+.sidebar {
+  overflow: hidden;
+}
+.sidebar > * {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: -1rem;
+}
+.sidebar > * > * {
+  margin: 1rem;
+}
+.sidebar__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-basis: 20rem;
+  flex-grow: 1;
+}
+.sidebar__main > * + * {
+  margin-top: 1em;
+}
+.sidebar__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: calc(55% - 1.5rem);
+}
+.sidebar__content > * + * {
+  margin-top: 1em;
+}
+.sidebar--expanded {
+  width: 100%;
+}
+.sidebar--no-space > * {
+  margin: 0;
+}
+.sidebar--no-space > * > * {
+  margin: 0;
+}
+.sidebar--no-space-x > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+.sidebar--no-space-x > * > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+.sidebar--xl .sidebar__main {
+  flex-basis: 26rem;
+}
+.sidebar--lg .sidebar__main {
+  flex-basis: 22rem;
+}
+.sidebar--sm .sidebar__main {
+  flex-basis: 15rem;
+}
+.sidebar--xs .sidebar__main {
+  flex-basis: 12rem;
+}
+
+/*------------------------------------*\
+    #Switcher layout primitive
+
+    Uses this to switch between vertical and horizontal layouts:
+    https://www.freecodecamp.org/news/the-fab-four-technique-to-create-responsive-emails-without-media-queries-baf11fdfa848/
+
+    `.l-switcher` switches a Flexbox context between a horizontal and a
+    vertical layout at a given, CONTAINER-BASED breakpoint, rather than
+    using viewport media queries.
+
+    The child elements in the horizontal configuration will be of equal
+  width.
+
+  To apply gutter spacing, apply padding to the flex items and an
+    equivalent negative margin to the flex container. This will double up,
+    so use half the intended value.
+
+\*------------------------------------*/
+.switcher {
+  overflow: hidden;
+}
+
+.switcher > * {
+  display: flex;
+  flex-flow: row wrap;
+  margin: -0.625rem;
+}
+
+/**
+1. Determines the item width in the single column, vertical configuration
+
+2. Determines how many items will be in a row in the horizontal configuration
+
+3. The 690 value matches the desired breakpoint value. The 100% corresponds to
+the width of the columns' parent container. This calculation will create a
+value that's either bigger than the max-width or smaller than the min-width,
+so that either of these properties is applied instead.
+ */
+.switcher > * > * {
+  max-width: 100%;
+  /* 1 */
+  min-width: 33.333333%;
+  /* 2 */
+  width: calc(476100px - 69000%);
+  /* 3 */
+  padding: 0.625rem;
+  box-sizing: border-box;
+}
+
+.switcher--50 > * > * {
+  min-width: 50%;
+}
+
+.switcher--25 > * > * {
+  max-width: 50%;
+  /* 1 */
+  min-width: 25%;
+  width: calc(608400px - 78000%);
+  /* 3 */
+}
+@media (max-width: 30rem) {
+  .switcher--25 > * > * {
+    max-width: 100%;
+  }
+}
+
+.switcher--no-space > * {
+  margin: 0;
+}
+.switcher--no-space > * > * {
+  padding: 0;
+  box-sizing: content-box;
+}
+
+.switcher--no-space-x > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+.switcher--no-space-x > * > * {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/*------------------------------------*\
+    #Cluster layout primitive
+
+    From https://absolutely.every-layout.dev/layouts/cluster/
+
+    `.cluster` suits any groups of elements that differ in length and
+    are liable to wrap. Use the Cluster to align any groups of horizontally
+    laid out elements to the left or right, or in the center, with even
+    spacing between elements.
+\*------------------------------------*/
+/**
+Suppress horizontal scrolling caused by the negative margin
+in some circumstances.
+ */
+.cluster {
+  overflow: hidden;
+}
+
+/**
+We use flexbox to configure the elements into clusters without creating
+white space. We can control how we align items within the cluster,
+by using 'align-items` and `justify-content`.
+ */
+.cluster > * {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: -0.625rem;
+}
+
+/**
+We apply an even, symmetrical margin to the elements that we wish to space
+out, but halve it to to account for 'doubling up' at the edges.
+ */
+.cluster > * > * {
+  display: inline-block;
+  margin: 0.625rem;
+}
+
+.cluster--no-space > * {
+  margin: 0;
+}
+.cluster--no-space > * > * {
+  margin: 0;
+}
+
+/*------------------------------------*\
+    #Cover layout primitive
+
+    From https://absolutely.every-layout.dev/layouts/cover/
+
+    `.l-cover` uses Flexbox to vertically center a principal item
+    of content. It is given a min-height value to achieve this
+    which could be 100vh, or less.
+
+    Horizontal centering of content can be achieved using the `.l-center`
+    layout within `.l-cover`, or with the `.u-center` utility found in
+    /90-utilities/layout
+\*------------------------------------*/
+.cover {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  padding: 1rem;
+}
+
+.cover > * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.cover > .cover__main {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/**
+These styles space out an optional header/footer area without
+disturbing the vertically centered element.
+ */
+.cover > :first-child:not(.cover__main) {
+  margin-top: 0;
+}
+
+.cover > :last-child:not(.cover__main) {
+  margin-bottom: 0;
+}
+
+/*------------------------------------*\
+  #Frame layout primitive
+
+  From https://absolutely.every-layout.dev/layouts/frame/
+
+  `.frame` is most useful for cropping media (images
+  and video) to a specific aspect ratio.
+
+  It is not recommended to apply the `.frame` class to the
+  <figure> element, as it will interfere with the <figcaption>.
+  Instead, place it on <picture> or a <div> inside of <figure>.
+\*------------------------------------*/
+.frame {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.frame > * {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.frame > iframe,
+.frame > img,
+.frame > video {
+  height: 100%;
+  width: 100%;
+}
+
+.frame > img,
+.frame > video {
+  object-fit: cover;
+}
+
+/* Common aspect ratios */
+.frame--16-9 {
+  padding-bottom: 56.25%;
+}
+
+.frame--3-2 {
+  padding-bottom: 66.67%;
+}
+
+.frame--4-3 {
+  padding-bottom: 75%;
+}
+
+.frame--square {
+  padding-bottom: 100%;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-padding-x {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.no-padding-y {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.no-padding-top {
+  padding-top: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-margin-x {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.no-margin-y {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.no-margin-top {
+  margin-top: 0 !important;
+}
+
+.center {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 body {
   background-color: #ffffff;
   font-family: "Roboto Mono", "monospace";
+}
+
+.d-main {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .d-menu__trigger {
@@ -533,6 +1001,7 @@ body {
   opacity: 0;
   transform: translateX(110%);
   transition: all 0.4s;
+  overflow: auto;
 }
 .d-menu__content__inner {
   padding: 1.5rem;
@@ -551,13 +1020,29 @@ body {
   letter-spacing: 0.1em;
   transition: all 0.4s;
 }
+.d-menu__content__main > ul > li {
+  border-bottom: 1px solid #777777;
+}
 .d-menu__content__main > ul > li > a {
   padding: 1.25rem 0;
-  border-bottom: 1px solid #777777;
 }
 .d-menu__content__main > ul > li > a:hover {
   background-color: #111111;
   padding-left: 1rem;
+}
+.d-menu__content__main .d-menu__subs {
+  padding-left: 1rem;
+  margin-top: 0.625rem;
+}
+.d-menu__content__main .d-menu__subs > li {
+  margin-bottom: 1.2rem;
+}
+.d-menu__content__main .d-menu__subs > li > a {
+  color: #bbbbbb;
+  font-size: 0.75rem;
+}
+.d-menu__content__main .d-menu__subs > li > a:hover {
+  color: #ffffff;
 }
 .d-menu__close {
   margin-bottom: 1rem;
@@ -575,4 +1060,8 @@ body {
 .d-menu[data-state=open] .d-menu__content {
   opacity: 1;
   transform: translateX(0);
+}
+
+.d-block {
+  padding: 2rem;
 }

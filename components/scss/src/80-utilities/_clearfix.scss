@@ -1,0 +1,14 @@
+//- 80-utilities/clearfix
+//
+// From: https://css-tricks.com/snippets/css/clear-fix/
+//
+
+%clearfix {
+
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+
+}

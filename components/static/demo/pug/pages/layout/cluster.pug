@@ -1,0 +1,58 @@
+
+extends ../../includes/layout
+
+block vars
+  - var pageTitle      = 'Layout - Cluster | Demo Static Components';
+  - var pageName       = 'layout';
+  - var bodyClass      = 'layout';
+  - var subpath        = true;
+
+block main
+
+  .container.container--full
+    h2 .container.container--full
+
+    .d-block.bg--primary.text--white
+      +text-sample-short
+  
+  br
+  br
+  br
+  .container.container--full
+    h2 .cluster
+    .cluster 
+      .cluster__row
+        .cluster__column
+          .d-block.bg--primary.text--white Home
+        .cluster__column
+          .d-block.bg--primary.text--white About Us
+        .cluster__column
+          .d-block.bg--primary.text--white Service
+        .cluster__column
+          .d-block.bg--primary.text--white Partners
+        .cluster__column
+          .d-block.bg--primary.text--white Blog
+        .cluster__column
+          .d-block.bg--primary.text--white Contact Us
+            
+  
+  br
+  br
+  br
+  .container.container--full
+    h2 .cluster.cluster--no-space
+    .cluster.cluster--no-space
+      .cluster__row
+        .cluster__column
+          .d-block.bg--primary.text--white Home
+        .cluster__column
+          .d-block.bg--primary.text--white About Us
+        .cluster__column
+          .d-block.bg--primary.text--white Service
+        .cluster__column
+          .d-block.bg--primary.text--white Partners
+        .cluster__column
+          .d-block.bg--primary.text--white Blog
+        .cluster__column
+          .d-block.bg--primary.text--white Contact Us
+            

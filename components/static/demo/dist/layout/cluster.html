@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"><![endif]-->
+    <title>Layout - Cluster | Demo Static Components</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, user-scalable=no">
+    <link rel="icon" href="favicon.png" type="image/x-icon" sizes="16x16"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css">
+  </head>
+  <body class="layout">
+    <div class="d-menu">
+      <div class="d-menu__trigger">
+        <button class="d-menu__button" type="button"><i class="d-menu__button__icon"><img src="../assets/icon__menu.svg" alt="Menu"></i><strong class="d-menu__button__label">Menu</strong></button>
+      </div>
+      <div class="d-menu__content">
+        <div class="d-menu__content__inner">
+          <div class="d-menu__close">
+            <button type="button"><img src="../assets/icon__close.svg" alt="Close">
+            </button>
+          </div>
+          <div class="d-menu__content__main">
+            <ul></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="d-main">
+      <div class="container container--full">
+        <h2>.container.container--full</h2>
+        <div class="d-block bg--primary text--white">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus lorem, tempor in magna sed, suscipit tincidunt neque. Praesent orci nisl, volutpat ut elit sit amet, tristique facilisis turpis. Mauris purus erat, vehicula at viverra ut, cursus ac erat. Nam bibendum arcu id tristique ullamcorper. Aenean non dictum eros, id consequat nunc. Praesent ac est tristique, pretium augue sit amet, malesuada sapien. Integer convallis semper metus, ac maximus est eleifend id.</p>
+        </div>
+      </div><br><br><br>
+      <div class="container container--full">
+        <h2>.cluster</h2>
+        <div class="cluster"> 
+          <div class="cluster__row">
+            <div class="cluster__column">
+              <div class="d-block bg--primary text--white">Home</div>
+            </div>
+            <div class="cluster__column">
+              <div class="d-block bg--primary text--white">About Us</div>
+            </div>
+            <div class="cluster__column">
+              <div class="d-block bg--primary text--white">Service</div>
+            </div>
+            <div class="cluster__column">
+              <div class="d-block bg--primary text--white">Partners</div>
+            </div>
+            <div class="cluster__column">
+              <div class="d-block bg--primary text--white">Blog</div>
+            </div>
+            <div class="cluster__column">
+              <div class="d-block bg--primary text--white">Contact Us</div>
+            </div>
+          </div>
+        </div>
+      </div><br><br><br>
+      <div class="container container--full">
+        <h2>.cluster.cluster--no-space</h2>
+        <div class="cluster cluster--no-space">
+          <div class="cluster__row">
+            <div class="cluster__column">
+              <div class="d-block bg--primary text--white">Home</div>
+            </div>
+            <div class="cluster__column">
+              <div class="d-block bg--primary text--white">About Us</div>
+            </div>
+            <div class="cluster__column">
+              <div class="d-block bg--primary text--white">Service</div>
+            </div>
+            <div class="cluster__column">
+              <div class="d-block bg--primary text--white">Partners</div>
+            </div>
+            <div class="cluster__column">
+              <div class="d-block bg--primary text--white">Blog</div>
+            </div>
+            <div class="cluster__column">
+              <div class="d-block bg--primary text--white">Contact Us</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

@@ -1,18 +1,54 @@
 [
   {
     "id": "box",
+    "path": "box",
     "label": "Box"
   },
   {
     "id": "button",
+    "path": "button",
     "label": "Button"
   },
   {
     "id": "card",
+    "path": "card",
     "label": "Card"
   },
   {
     "id": "layout",
-    "label": "Layout"
+    "path": "layout",
+    "label": "Layout",
+    "subs": [
+      {
+        "id": "layout-container",
+        "path": "layout/container",
+        "label": "Container"
+      },
+      {
+        "id": "layout-sidebar",
+        "path": "layout/sidebar",
+        "label": "Sidebar"
+      },
+      {
+        "id": "layout-switcher",
+        "path": "layout/switcher",
+        "label": "Switcher"
+      },
+      {
+        "id": "layout-cluster",
+        "path": "layout/cluster",
+        "label": "Cluster"
+      },
+      {
+        "id": "layout-cover",
+        "path": "layout/cover",
+        "label": "Cover"
+      },
+      {
+        "id": "layout-frame",
+        "path": "layout/frame",
+        "label": "Frame"
+      }
+    ]
   }
 ]

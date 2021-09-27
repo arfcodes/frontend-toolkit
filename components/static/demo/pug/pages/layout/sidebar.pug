@@ -1,0 +1,114 @@
+
+extends ../../includes/layout
+
+block vars
+  - var pageTitle      = 'Layout - Sidebar | Demo Static Components';
+  - var pageName       = 'layout';
+  - var bodyClass      = 'layout';
+  - var subpath        = true;
+
+block main
+
+  .container.container--full
+    h2 .container.container--full
+
+    .d-block.bg--primary.text--white
+      +text-sample
+  
+  br
+  br
+  br
+  .container.container--full
+    h2 .sidebar
+    .sidebar 
+      .sidebar__inner 
+        .sidebar__main
+          .d-block.bg--primary.text--white
+            +text-sample-short
+        .sidebar__content
+          .d-block.bg--danger.text--white
+            +text-sample-long
+  br
+  br
+  br
+  br
+  .container.container--full
+    h2 .sidebar--xl
+    .sidebar.sidebar--xl
+      .sidebar__inner 
+        .sidebar__main
+          .d-block.bg--primary.text--white
+            +text-sample-short
+        .sidebar__content
+          .d-block.bg--danger.text--white
+            +text-sample-long
+  br
+  br
+  br
+  br
+  .container.container--full
+    h2 .sidebar--lg
+    .sidebar.sidebar--lg
+      .sidebar__inner 
+        .sidebar__main
+          .d-block.bg--primary.text--white
+            +text-sample-short
+        .sidebar__content
+          .d-block.bg--danger.text--white
+            +text-sample-long
+  br
+  br
+  br
+  br
+  .container.container--full
+    h2 .sidebar--sm
+    .sidebar.sidebar--sm
+      .sidebar__inner 
+        .sidebar__main
+          .d-block.bg--primary.text--white
+            +text-sample-short
+        .sidebar__content
+          .d-block.bg--danger.text--white
+            +text-sample-long
+  br
+  br
+  br
+  br
+  .container.container--full
+    h2 .sidebar--xs
+    .sidebar.sidebar--xs
+      .sidebar__inner 
+        .sidebar__main
+          .d-block.bg--primary.text--white
+            +text-sample-short
+        .sidebar__content
+          .d-block.bg--danger.text--white
+            +text-sample-long
+  br
+  br
+  br
+  br
+  .container.container--full
+    h2 .sidebar--no-space
+    .sidebar.sidebar--no-space
+      .sidebar__inner 
+        .sidebar__main
+          .d-block.bg--primary.text--white
+            +text-sample-short
+        .sidebar__content
+          .d-block.bg--danger.text--white
+            +text-sample-long
+  br
+  br
+  br
+  br
+  .container.container--full
+    h2 .sidebar--no-space-x
+    .sidebar.sidebar--no-space-x
+      .sidebar__inner 
+        .sidebar__main
+          .d-block.bg--primary.text--white
+            +text-sample-short
+        .sidebar__content
+          .d-block.bg--danger.text--white
+            +text-sample-long
