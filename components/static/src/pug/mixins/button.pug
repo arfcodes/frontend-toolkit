@@ -1,0 +1,79 @@
+//-
+//- Button mixin
+mixin button__content(label, type, icon = 'arrow-right', iconPos = 'right')
+  span.button__content
+    if iconPos == 'left'
+      +button__icon(icon)
+    if label
+      span.button__label= label
+    if iconPos == 'right'
+      +button__icon(icon)
+      
+mixin button__icon(icon = 'arrow-right')
+  if icon
+    span.button__icon
+      if icon == 'arrow-right'
+        i.icon__arrow
+          +icon__arrow-right()
+      if icon == 'arrow-circle-up'
+        i.icon__arrow
+          +icon__arrow-circle-up()
+      else if icon == 'linkedin'
+        i.icon__linkedin
+          +icon__linkedin()
+      else if icon == 'search'
+        i.icon__search
+          +icon__search()
+
+//- Button mixin
+mixin button(label, variant = 'white', size = 'md', icon = 'arrow-right', iconPos = 'right')
+  button(type="button", class="button button--"+variant+" button--"+size)&attributes(attributes)
+    +button__content(label, type, icon, iconPos)
+
+//- Button link mixin
+mixin button-link(label, link, variant = 'white', size = 'md', icon = 'arrow-right', iconPos = 'right')
+  a(href=link, class="button button--"+variant+" button--"+size)&attributes(attributes)
+    +button__content(label, type, icon, iconPos)
+
+//- Button linkedin mixin
+mixin button-linkedin(link)
+  +button-link('Linkedin Profile', link, 'white', 'md', 'linkedin', 'left')
+
+//- Button line mixin
+mixin button-line(label, variant = 'white', size = 'md', icon = false, iconPos = 'right')
+  +button(label, 'line ' + 'button--'+variant, size, icon, iconPos)
+
+//- Button link line mixin
+mixin button-link-line(label, link, variant = 'white', size = 'md', icon = false, iconPos = 'right')
+  +button-link(label, link, 'line ' + 'button--'+variant, size, icon, iconPos)
+
+//- Button social mixin
+mixin button-social(icon, url, size = 'md')
+  a(href=url, class="button button--line button--square button--primary button--"+size)&attributes(attributes)
+    span.button__content
+      if icon == 'facebook'
+        span.button__icon
+          +icon__facebook()
+      else if icon == 'twitter'
+        span.button__icon
+          +icon__twitter()
+      else if icon == 'linkedin'
+        span.button__icon
+          +icon__linkedin()
+      else if icon == 'email'
+        span.button__icon
+          +icon__email()
+    
+
+//- Button pagin mixin
+mixin button-pagin(type, url, size = 'md')
+  a(href=url, class="button button--line button--square button--white button--"+size)&attributes(attributes)
+    span.button__content
+      if type == 'next'
+        span.button__icon
+          +icon__arrow-right()
+      else if type == 'prev'
+        span.button__icon
+          +icon__arrow-left()
+      else
+        span.button__label= type

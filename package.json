@@ -1,0 +1,125 @@
+{
+  "name": "@rfcodes/frontend-toolkit",
+  "private": true,
+  "description": "Toolkit to ease the daily life of frontend developers",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "M Arif Mahthunisnaini",
+    "url": "http://iznyn.github.io/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arfcodes/frontend-toolkit"
+  },
+  "engines": {
+    "npm": ">=7",
+    "node": "14"
+  },
+  "keywords": [
+    "frontend",
+    "toolkit",
+    "components"
+  ],
+  "scripts": {
+    "dev:static": "yarn workspace web-static-components develop",
+    "dev:react": "yarn workspace react-components develop",
+    "dev:main": "concurrently \"yarn dev:static\" \"yarn dev:react\"",
+    "build:static": "yarn workspace web-static-components build",
+    "docs:dev": "yarn workspace docs start",
+    "docs:serve": "yarn workspace docs serve",
+    "docs:build": "yarn workspace docs build",
+    "commit": "git-cz"
+  },
+  "circular-dependency-plugin": "^5.2.2",
+  "compression-webpack-plugin": "^7.1.2",
+  "copy-webpack-plugin": "^8.1.1",
+  "cross-env": "^7.0.3",
+  "css-loader": "^5.2.4",
+  "dotenv": "^9.0.0",
+  "dotenv-webpack": "^1.8.0",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@fullhuman/postcss-purgecss": "^3.1.3",
+    "autoprefixer": "^10.2.5",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "circular-dependency-plugin": "^5.2.2",
+    "compression-webpack-plugin": "^7.1.2",
+    "concurrently": "^6.0.0",
+    "copy-webpack-plugin": "^8.1.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.4",
+    "cssnano": "^5.0.8",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "^9.0.0",
+    "dotenv-webpack": "^1.8.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-import-resolver-webpack": "^0.13.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^2.1.2",
+    "html-webpack-plugin": "^5.3.1",
+    "image-webpack-loader": "^7.0.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.8",
+    "postcss-cli": "^8.3.1",
+    "postcss-focus": "^5.0.1",
+    "postcss-fontpath": "^1.0.0",
+    "postcss-loader": "^5.2.0",
+    "postcss-scss": "^3.0.5",
+    "postcss-short": "^5.0.0",
+    "prettier": "^2.2.1",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0",
+    "stylelint": "^13.12.0",
+    "stylelint-config-recommended": "^4.0.0",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "svg-url-loader": "^7.1.1",
+    "typescript": "^4.2.3",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-pwa-manifest": "^4.3.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "body-max-line-length": [
+        2,
+        "always",
+        200
+      ]
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "workspaces": [
+    "packages/*",
+    "components/*",
+    "docs"
+  ]
+}

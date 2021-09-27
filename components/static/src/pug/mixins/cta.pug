@@ -1,0 +1,34 @@
+//-
+//- CTA mixin
+mixin cta(subtitle, button, infoAlign = 'middle', textAlign = 'left', imagePos = 'left')
+  - var img = '../images/cta--thumbnail.png'
+  - var title = 'Hello, we are Clove'
+  - var info = 'The first market research consultant that provide transparent data, with 100% audio checking, tailored to your need.'
+
+  div(class="cta cta--thumb-"+imagePos+" cta--align--"+infoAlign)
+    .cta__inner
+      .cta__main.grid.gap--2xl
+        .cta__thumbnail.column--50
+          img(src=img alt="")
+        div(class="cta__content column--50 cta__content--"+textAlign)
+          .cta__header
+            h2.cta__title.text--3xl= title
+            if subtitle
+              h3.cta__subtitle.text--xl= subtitle
+
+          .cta__body
+            p= info
+
+          if button
+            .cta__action
+              +button-link(button, '#')
+            
+
+//-
+//- section CTA mixin
+mixin cta-section(subtitle, button, space='md', bgColor='primary', container='lg', infoAlign='middle', textAlign='left', imagePos='left')
+  div(class="section section--space-"+space+" bg--"+bgColor)
+    .section__inner
+      div(class="container container--"+container)
+        .section__main
+          +cta(subtitle, button, infoAlign, textAlign, imagePos, showButton)

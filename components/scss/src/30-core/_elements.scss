@@ -1,0 +1,23 @@
+//- 30-core/elements
+
+body {
+  font-family: $font-main;
+  background-color: $color-white;
+  color: $color-black;
+}
+a {
+  outline: none;
+  color: $color-link;
+
+  &:hover {
+    color: darken($color-link, 10%);
+  }
+
+  &:visited {
+    color: lighten($color-link, 20%);
+  }
+}
+p {
+  font-size: $text-md;
+  line-height: $line-height-md;
+}

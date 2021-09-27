@@ -1,0 +1,26 @@
+{
+  "name": "scss-components",
+  "private": true,
+  "description": "Scss components",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "M Arif Mahthunisnaini",
+    "url": "http://iznyn.github.io/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arfcodes/frontend-toolkit",
+    "directory": "components/scss"
+  },
+  "keywords": [
+    "style",
+    "css",
+    "sass",
+    "scss"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "spinkit": "^2.0.1"
+  }
+}
