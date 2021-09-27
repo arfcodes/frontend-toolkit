@@ -14,7 +14,7 @@
   },
   "engines": {
     "npm": ">=7",
-    "node": "14"
+    "node": ">=14"
   },
   "keywords": [
     "frontend",
@@ -74,7 +74,6 @@
     "html-webpack-plugin": "^5.3.1",
     "image-webpack-loader": "^7.0.1",
     "mini-css-extract-plugin": "^1.6.0",
-    "node-sass": "^5.0.0",
     "postcss": "^8.2.8",
     "postcss-cli": "^8.3.1",
     "postcss-focus": "^5.0.1",

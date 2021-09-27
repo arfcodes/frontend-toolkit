@@ -1,6 +1,6 @@
 /* eslint-disable */
 const path = require('path');
-const sass = require('node-sass');
+const sass = require('sass');
 
 function resolve(dir) {
   return path.join(__dirname, dir);

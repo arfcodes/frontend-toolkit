@@ -1,121 +1,126 @@
 .text--black {
-  color: #222222; }
-
+  color: #222222;
+}
 .text--white {
-  color: #ffffff; }
-
+  color: #ffffff;
+}
 .text--muted {
-  color: #cccccc; }
-
+  color: #cccccc;
+}
 .text--primary {
-  color: #0f59be; }
-
+  color: #0f59be;
+}
 .text--secondary {
-  color: #1a7d99; }
-
+  color: #1a7d99;
+}
 .text--success {
-  color: #48c78e; }
-
+  color: #48c78e;
+}
 .text--warning {
-  color: #f7942c; }
-
+  color: #f7942c;
+}
 .text--danger {
-  color: #f14668; }
-
+  color: #f14668;
+}
 .text--info {
-  color: #3e8ed0; }
+  color: #3e8ed0;
+}
 
 .bg--primary {
-  background-color: #0f59be; }
-
+  background-color: #0f59be;
+}
 .bg--secondary {
-  background-color: #1a7d99; }
-
+  background-color: #1a7d99;
+}
 .bg--black {
-  background-color: #222222; }
-
+  background-color: #222222;
+}
 .bg--white {
-  background-color: #ffffff; }
-
+  background-color: #ffffff;
+}
 .bg--muted {
-  background-color: #cccccc; }
-
+  background-color: #cccccc;
+}
 .bg--success {
-  background-color: #48c78e; }
-
+  background-color: #48c78e;
+}
 .bg--warning {
-  background-color: #f7942c; }
-
+  background-color: #f7942c;
+}
 .bg--danger {
-  background-color: #f14668; }
-
+  background-color: #f14668;
+}
 .bg--info {
-  background-color: #3e8ed0; }
+  background-color: #3e8ed0;
+}
 
 .border--black {
-  border-color: #222222; }
-
+  border-color: #222222;
+}
 .border--white {
-  border-color: #ffffff; }
-
+  border-color: #ffffff;
+}
 .border--muted {
-  border-color: #cccccc; }
-
+  border-color: #cccccc;
+}
 .border--primary {
-  border-color: #0f59be; }
-
+  border-color: #0f59be;
+}
 .border--secondary {
-  border-color: #1a7d99; }
-
+  border-color: #1a7d99;
+}
 .border--success {
-  border-color: #48c78e; }
-
+  border-color: #48c78e;
+}
 .border--warning {
-  border-color: #f7942c; }
-
+  border-color: #f7942c;
+}
 .border--danger {
-  border-color: #f14668; }
-
+  border-color: #f14668;
+}
 .border--info {
-  border-color: #3e8ed0; }
+  border-color: #3e8ed0;
+}
 
 .font--main {
-  font-family: "Arial", sans-serif; }
-
+  font-family: "Arial", sans-serif;
+}
 .font--title {
-  font-family: "Times New Roman", sans-serif; }
+  font-family: "Times New Roman", sans-serif;
+}
 
 .text--2xs {
   font-size: 0.6875rem;
-  line-height: 1.3; }
-
+  line-height: 1.3;
+}
 .text--xs {
   font-size: 0.75rem;
-  line-height: 1.3; }
-
+  line-height: 1.3;
+}
 .text--sm {
   font-size: 0.875rem;
-  line-height: 1.4; }
-
+  line-height: 1.4;
+}
 .text--md {
   font-size: 1rem;
-  line-height: 1.8; }
-
+  line-height: 1.8;
+}
 .text--lg {
   font-size: 1.5rem;
-  line-height: 1.3; }
-
+  line-height: 1.3;
+}
 .text--xl {
   font-size: 2rem;
-  line-height: 1.2; }
-
+  line-height: 1.2;
+}
 .text--2xl {
   font-size: 2.25rem;
-  line-height: 1.5; }
-
+  line-height: 1.5;
+}
 .text--3xl {
   font-size: 3rem;
-  line-height: 1.2; }
+  line-height: 1.2;
+}
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -128,7 +133,8 @@ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  /* 2 */
+}
 
 /* Sections
    ========================================================================== */
@@ -136,13 +142,15 @@ html {
  * Remove the margin in all browsers.
  */
 body {
-  margin: 0; }
+  margin: 0;
+}
 
 /**
  * Render the `main` element consistently in IE.
  */
 main {
-  display: block; }
+  display: block;
+}
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
@@ -150,7 +158,8 @@ main {
  */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  margin: 0.67em 0;
+}
 
 /* Grouping content
    ========================================================================== */
@@ -164,7 +173,8 @@ hr {
   height: 0;
   /* 1 */
   overflow: visible;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -174,7 +184,8 @@ pre {
   font-family: monospace;
   /* 1 */
   font-size: 1em;
-  /* 2 */ }
+  /* 2 */
+}
 
 /* Text-level semantics
    ========================================================================== */
@@ -183,7 +194,8 @@ pre {
  */
 a {
   background-color: transparent;
-  text-decoration-thickness: 1px; }
+  text-decoration-thickness: 1px;
+}
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -195,14 +207,16 @@ abbr[title] {
   text-decoration: underline;
   /* 2 */
   text-decoration-style: dotted;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bolder;
+}
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -214,13 +228,15 @@ samp {
   font-family: monospace;
   /* 1 */
   font-size: 1em;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Add the correct font size in all browsers.
  */
 small {
-  font-size: 80%; }
+  font-size: 80%;
+}
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -231,13 +247,16 @@ sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 sub {
-  bottom: -0.25em; }
+  bottom: -0.25em;
+}
 
 sup {
-  top: -0.5em; }
+  top: -0.5em;
+}
 
 /* Embedded content
    ========================================================================== */
@@ -245,7 +264,8 @@ sup {
  * Remove the border on images inside links in IE 10.
  */
 img {
-  border-style: none; }
+  border-style: none;
+}
 
 /* Forms
    ========================================================================== */
@@ -265,7 +285,8 @@ textarea {
   line-height: 1.15;
   /* 1 */
   margin: 0;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Show the overflow in IE.
@@ -274,7 +295,8 @@ textarea {
 button,
 input {
   /* 1 */
-  overflow: visible; }
+  overflow: visible;
+}
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -283,41 +305,46 @@ input {
 button,
 select {
   /* 1 */
-  text-transform: none; }
+  text-transform: none;
+}
 
 /**
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: button; }
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
 
 /**
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
   border-style: none;
-  padding: 0; }
+  padding: 0;
+}
 
 /**
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
 
 /**
  * Correct the padding in Firefox.
  */
 fieldset {
-  padding: 0.35em 0.75em 0.625em; }
+  padding: 0.35em 0.75em 0.625em;
+}
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -337,53 +364,60 @@ legend {
   padding: 0;
   /* 3 */
   white-space: normal;
-  /* 1 */ }
+  /* 1 */
+}
 
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 progress {
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /**
  * Remove the default vertical scrollbar in IE 10+.
  */
 textarea {
-  overflow: auto; }
+  overflow: auto;
+}
 
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type="search"] {
+[type=search] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
-  /* 2 */ }
+  /* 2 */
+}
 
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none; }
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -393,7 +427,8 @@ textarea {
   -webkit-appearance: button;
   /* 1 */
   font: inherit;
-  /* 2 */ }
+  /* 2 */
+}
 
 /* Interactive
    ========================================================================== */
@@ -401,13 +436,15 @@ textarea {
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
 details {
-  display: block; }
+  display: block;
+}
 
 /*
  * Add the correct display in all browsers.
  */
 summary {
-  display: list-item; }
+  display: list-item;
+}
 
 /* Misc
    ========================================================================== */
@@ -415,41 +452,49 @@ summary {
  * Add the correct display in IE 10+.
  */
 template {
-  display: none; }
+  display: none;
+}
 
 /**
  * Add the correct display in IE 10.
  */
 [hidden] {
-  display: none; }
+  display: none;
+}
 
 body {
   font-family: "Arial", sans-serif;
   background-color: #ffffff;
-  color: #222222; }
+  color: #222222;
+}
 
 a {
   outline: none;
-  color: #0f59be; }
-  a:hover {
-    color: #0b438f; }
-  a:visited {
-    color: #438cf0; }
+  color: #0f59be;
+}
+a:hover {
+  color: #0b438f;
+}
+a:visited {
+  color: #438cf0;
+}
 
 p {
   font-size: 1rem;
-  line-height: 1.8; }
+  line-height: 1.8;
+}
 
 body {
   background-color: #ffffff;
-  font-family: "Roboto Mono", "monospace"; }
+  font-family: "Roboto Mono", "monospace";
+}
 
 .d-menu__trigger {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  z-index: 9; }
-
+  z-index: 9;
+}
 .d-menu__button {
   border: 0;
   outline: none;
@@ -464,15 +509,18 @@ body {
   justify-content: center;
   cursor: pointer;
   opacity: 0.2;
-  transition: all 0.4s; }
-  .d-menu__button:hover {
-    opacity: 1; }
-  .d-menu__button img {
-    width: 60%; }
-  .d-menu__button__label {
-    width: 0;
-    overflow: hidden; }
-
+  transition: all 0.4s;
+}
+.d-menu__button:hover {
+  opacity: 1;
+}
+.d-menu__button img {
+  width: 60%;
+}
+.d-menu__button__label {
+  width: 0;
+  overflow: hidden;
+}
 .d-menu__content {
   position: fixed;
   top: 0;
@@ -484,39 +532,47 @@ body {
   z-index: 10;
   opacity: 0;
   transform: translateX(110%);
-  transition: all 0.4s; }
-  .d-menu__content__inner {
-    padding: 1.5rem; }
-  .d-menu__content__main ul {
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-  .d-menu__content__main a {
-    font-size: .875rem;
-    font-weight: 600;
-    display: block;
-    color: #ffffff;
-    text-decoration: none;
-    letter-spacing: 0.1em;
-    transition: all 0.4s; }
-  .d-menu__content__main > ul > li > a {
-    padding: 1.25rem 0;
-    border-bottom: 1px solid #777777; }
-    .d-menu__content__main > ul > li > a:hover {
-      background-color: #111111;
-      padding-left: 1rem; }
-
+  transition: all 0.4s;
+}
+.d-menu__content__inner {
+  padding: 1.5rem;
+}
+.d-menu__content__main ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.d-menu__content__main a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: all 0.4s;
+}
+.d-menu__content__main > ul > li > a {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #777777;
+}
+.d-menu__content__main > ul > li > a:hover {
+  background-color: #111111;
+  padding-left: 1rem;
+}
 .d-menu__close {
   margin-bottom: 1rem;
-  text-align: right; }
-  .d-menu__close button {
-    background-color: transparent;
-    border: 0;
-    padding: 0;
-    cursor: pointer; }
-    .d-menu__close button img {
-      width: 1.25rem; }
-
-.d-menu[data-state="open"] .d-menu__content {
+  text-align: right;
+}
+.d-menu__close button {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.d-menu__close button img {
+  width: 1.25rem;
+}
+.d-menu[data-state=open] .d-menu__content {
   opacity: 1;
-  transform: translateX(0); }
+  transform: translateX(0);
+}
