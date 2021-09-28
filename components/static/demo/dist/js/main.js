@@ -3,22 +3,26 @@ module.exports=[
   {
     "id": "box",
     "path": "box",
-    "label": "Box"
+    "label": "Box",
+    "type": "all"
   },
   {
     "id": "button",
     "path": "button",
-    "label": "Button"
+    "label": "Button",
+    "type": "all"
   },
   {
     "id": "card",
     "path": "card",
-    "label": "Card"
+    "label": "Card",
+    "type": "all"
   },
   {
     "id": "layout",
     "path": "layout",
     "label": "Layout",
+    "type": "all",
     "subs": [
       {
         "id": "layout-cluster",
@@ -92,37 +96,39 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
   var menuEl = menuRootEl.querySelector('ul');
 
   _navigation["default"].forEach(function (item) {
-    var nodeLi = document.createElement('LI');
-    var nodeA = document.createElement('A');
-    var nodeTxt = document.createTextNode(item.label);
-    nodeA.setAttribute('href', "".concat(rootUrl, "/").concat(item.path, ".html"));
-    nodeA.addEventListener('click', function (evt) {
-      return evt.stopPropagation();
-    });
-    nodeLi.setAttribute('data-id', item.id);
-    nodeA.appendChild(nodeTxt);
-    nodeLi.appendChild(nodeA); // Add submenu
-
-    if (typeof item.subs !== 'undefined' && item.subs.length > 0) {
-      var nodeSubsUl = document.createElement('UL');
-      nodeSubsUl.classList.add('d-menu__subs');
-      item.subs.forEach(function (itemSub) {
-        var nodeSubsLi = document.createElement('LI');
-        var nodeSubsA = document.createElement('A');
-        var nodeSubsTxt = document.createTextNode(itemSub.label);
-        nodeSubsA.setAttribute('href', "".concat(rootUrl, "/").concat(itemSub.path, ".html"));
-        nodeSubsA.addEventListener('click', function (evt) {
-          return evt.stopPropagation();
-        });
-        nodeSubsLi.setAttribute('data-id', itemSub.id);
-        nodeSubsA.appendChild(nodeSubsTxt);
-        nodeSubsLi.appendChild(nodeSubsA);
-        nodeSubsUl.appendChild(nodeSubsLi);
+    if (item.type === 'all' || item.type === 'static') {
+      var nodeLi = document.createElement('LI');
+      var nodeA = document.createElement('A');
+      var nodeTxt = document.createTextNode(item.label);
+      nodeA.setAttribute('href', "".concat(rootUrl, "/").concat(item.path, ".html"));
+      nodeA.addEventListener('click', function (evt) {
+        return evt.stopPropagation();
       });
-      nodeLi.appendChild(nodeSubsUl);
-    }
+      nodeLi.setAttribute('data-id', item.id);
+      nodeA.appendChild(nodeTxt);
+      nodeLi.appendChild(nodeA); // Add submenu
 
-    menuEl.appendChild(nodeLi);
+      if (typeof item.subs !== 'undefined' && item.subs.length > 0) {
+        var nodeSubsUl = document.createElement('UL');
+        nodeSubsUl.classList.add('d-menu__subs');
+        item.subs.forEach(function (itemSub) {
+          var nodeSubsLi = document.createElement('LI');
+          var nodeSubsA = document.createElement('A');
+          var nodeSubsTxt = document.createTextNode(itemSub.label);
+          nodeSubsA.setAttribute('href', "".concat(rootUrl, "/").concat(itemSub.path, ".html"));
+          nodeSubsA.addEventListener('click', function (evt) {
+            return evt.stopPropagation();
+          });
+          nodeSubsLi.setAttribute('data-id', itemSub.id);
+          nodeSubsA.appendChild(nodeSubsTxt);
+          nodeSubsLi.appendChild(nodeSubsA);
+          nodeSubsUl.appendChild(nodeSubsLi);
+        });
+        nodeLi.appendChild(nodeSubsUl);
+      }
+
+      menuEl.appendChild(nodeLi);
+    }
   });
 })();
 

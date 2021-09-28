@@ -2,22 +2,26 @@
   {
     "id": "box",
     "path": "box",
-    "label": "Box"
+    "label": "Box",
+    "type": "all"
   },
   {
     "id": "button",
     "path": "button",
-    "label": "Button"
+    "label": "Button",
+    "type": "all"
   },
   {
     "id": "card",
     "path": "card",
-    "label": "Card"
+    "label": "Card",
+    "type": "all"
   },
   {
     "id": "layout",
     "path": "layout",
     "label": "Layout",
+    "type": "all",
     "subs": [
       {
         "id": "layout-cluster",
