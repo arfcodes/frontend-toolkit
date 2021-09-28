@@ -1,1 +1,52 @@
 //- 50-components/button/core
+
+.button {
+  position: relative;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 0.4s;
+
+  &__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__label {
+    + .button__icon {
+      margin-left: 1rem;
+    }
+  }
+
+  &__icon {
+    transition: all 0.4s;
+
+    + .button__label {
+      margin-left: 1rem;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    color: inherit;
+  }
+
+  &:disabled, 
+  &.button--disabled, 
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.95;
+  }
+}

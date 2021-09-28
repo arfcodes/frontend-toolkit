@@ -9,7 +9,14 @@
     "id": "button",
     "path": "button",
     "label": "Button",
-    "type": "all"
+    "type": "all",
+    "subs": [
+      {
+        "id": "button-style1",
+        "path": "button/style1",
+        "label": "Style 1"
+      }
+    ]
   },
   {
     "id": "card",
