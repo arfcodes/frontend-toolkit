@@ -1,0 +1,15 @@
+
+// All components
+@import "../../../scss/src/tools";
+
+.card--overlay {
+  @extend .inset--0;
+  position: absolute;
+  background-color: black;
+}
+
+.page--overlay {
+  @extend .inset--0;
+  position: fixed;
+  background-color: black; 
+}
