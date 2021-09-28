@@ -19,22 +19,4 @@
 //-
 //- TOOLS
 //-
-@import "tools";
-
-//-
-//- CORE
-//-
-@import "30-core/normalize";
-@import "30-core/font-face";
-@import "30-core/elements";
-@import "30-core/general";
-
-//-
-//- LAYOUTS
-//-
-@import "40-layouts/container";
-@import "40-layouts/sidebar";
-@import "40-layouts/switcher";
-@import "40-layouts/cluster";
-@import "40-layouts/cover";
-@import "40-layouts/frame";
+@import "20-tools/mixins/stack";
