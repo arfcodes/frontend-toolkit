@@ -39,39 +39,41 @@ import navs from '../../../../assets/data/navigation.json';
   const menuEl = menuRootEl.querySelector('ul');
 
   navs.forEach((item) => {
-    const nodeLi = document.createElement('LI');
-    const nodeA = document.createElement('A');
-    const nodeTxt = document.createTextNode(item.label);
+    if (item.type === 'all' || item.type === 'static') { 
+      const nodeLi = document.createElement('LI');
+      const nodeA = document.createElement('A');
+      const nodeTxt = document.createTextNode(item.label);
 
-    nodeA.setAttribute('href', `${rootUrl}/${item.path}.html`);
-    nodeA.addEventListener('click', (evt) => evt.stopPropagation());
-    nodeLi.setAttribute('data-id', item.id);
+      nodeA.setAttribute('href', `${rootUrl}/${item.path}.html`);
+      nodeA.addEventListener('click', (evt) => evt.stopPropagation());
+      nodeLi.setAttribute('data-id', item.id);
 
-    nodeA.appendChild(nodeTxt);
-    nodeLi.appendChild(nodeA);
+      nodeA.appendChild(nodeTxt);
+      nodeLi.appendChild(nodeA);
 
-    // Add submenu
-    if (typeof item.subs !== 'undefined' && item.subs.length > 0) {
-      const nodeSubsUl = document.createElement('UL');
-      nodeSubsUl.classList.add('d-menu__subs');
+      // Add submenu
+      if (typeof item.subs !== 'undefined' && item.subs.length > 0) {
+        const nodeSubsUl = document.createElement('UL');
+        nodeSubsUl.classList.add('d-menu__subs');
 
-      item.subs.forEach((itemSub) => {
-        const nodeSubsLi = document.createElement('LI');
-        const nodeSubsA = document.createElement('A');
-        const nodeSubsTxt = document.createTextNode(itemSub.label);
+        item.subs.forEach((itemSub) => {
+          const nodeSubsLi = document.createElement('LI');
+          const nodeSubsA = document.createElement('A');
+          const nodeSubsTxt = document.createTextNode(itemSub.label);
 
-        nodeSubsA.setAttribute('href', `${rootUrl}/${itemSub.path}.html`);
-        nodeSubsA.addEventListener('click', (evt) => evt.stopPropagation());
-        nodeSubsLi.setAttribute('data-id', itemSub.id);
+          nodeSubsA.setAttribute('href', `${rootUrl}/${itemSub.path}.html`);
+          nodeSubsA.addEventListener('click', (evt) => evt.stopPropagation());
+          nodeSubsLi.setAttribute('data-id', itemSub.id);
 
-        nodeSubsA.appendChild(nodeSubsTxt);
-        nodeSubsLi.appendChild(nodeSubsA);
-        nodeSubsUl.appendChild(nodeSubsLi);
-      });
+          nodeSubsA.appendChild(nodeSubsTxt);
+          nodeSubsLi.appendChild(nodeSubsA);
+          nodeSubsUl.appendChild(nodeSubsLi);
+        });
 
-      nodeLi.appendChild(nodeSubsUl);
+        nodeLi.appendChild(nodeSubsUl);
+      }
+
+      menuEl.appendChild(nodeLi);
     }
-
-    menuEl.appendChild(nodeLi);
   });
 })();
