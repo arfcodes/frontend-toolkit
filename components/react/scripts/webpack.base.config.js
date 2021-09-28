@@ -1,26 +1,26 @@
+/**
+ * COMMON WEBPACK CONFIGURATION
+ */
+
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 function resolve(dir) {
-  return path.join(__dirname, '/demo', dir);
+  return path.join(__dirname, '..', dir);
 }
 
-module.exports = {
-  mode: 'development',
-  entry: [resolve('index.js')],
+module.exports = (options) => ({
+  mode: options.mode,
+  entry: [require.resolve('react-app-polyfill/ie11'), resolve('demo/index.js')],
   output: {
-    path: resolve('dist'),
+    path: resolve('demo/dist'),
     filename: `[name].[chunkhash].js`,
   },
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
+  optimization: options.optimization,
   devServer: {
     port: 5001,
-    contentBase: resolve('dist'),
+    contentBase: resolve('demo/dist'),
     historyApiFallback: true,
     compress: true,
     clientLogLevel: 'silent',
@@ -69,37 +69,31 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    // Minify and optimize the index.html
-    new HtmlWebpackPlugin({
-      template: resolve('index.html'),
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeRedundantAttributes: true,
-        useShortDoctype: true,
-        removeEmptyAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        keepClosingSlash: true,
-        minifyJS: true,
-        minifyCSS: true,
-        minifyURLs: true,
-      },
-      inject: true,
-      publicPath: '/',
+  plugins: options.plugins.concat([
+    // Always expose NODE_ENV to webpack, in order to use `process.env.NODE_ENV`
+    // inside your code for any environment checks; Terser will automatically
+    // drop any unreachable code.
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'development',
     }),
-  ],
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
+      chunkFilename: 'styles.css',
+    }),
+  ]),
   resolve: {
-    modules: ['node_modules', 'src', '../../node_modules'],
+    modules: ['node_modules', 'src', '../../../node_modules'],
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
-      '@': path.join(__dirname, '/src'),
-      '@components': path.join(__dirname, '/src/components'),
-      '@root': path.join(__dirname, '../..'),
-      '@rootImages': path.join(__dirname, '../../assets/images'),
-      '@rootData': path.join(__dirname, '../../assets/data'),
-      '@demo': path.join(__dirname, '/demo'),
+      '@': resolve('/src'),
+      '@components': resolve('/src/components'),
+      '@root': resolve('../..'),
+      '@rootImages': resolve('../../assets/images'),
+      '@rootData': resolve('../../assets/data'),
+      '@demo': resolve('/demo'),
     },
   },
+  devtool: options.devtool,
   target: 'web', // Make web variables accessible to webpack, e.g. window
-};
+  performance: options.performance || {},
+});

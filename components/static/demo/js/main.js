@@ -39,7 +39,7 @@ import navs from '../../../../assets/data/navigation.json';
   const menuEl = menuRootEl.querySelector('ul');
 
   navs.forEach((item) => {
-    if (item.type === 'all' || item.type === 'static') { 
+    if (item.type === 'all' || item.type === 'static') {
       const nodeLi = document.createElement('LI');
       const nodeA = document.createElement('A');
       const nodeTxt = document.createTextNode(item.label);

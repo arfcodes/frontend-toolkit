@@ -21,7 +21,8 @@
   ],
   "scripts": {
     "build": "grunt build",
-    "develop": "grunt serve"
+    "develop": "grunt serve",
+    "lint": "eslint '**/*.{js,ts,tsx}'"
   },
   "devDependencies": {
     "@lodder/grunt-postcss": "^3.0.0",
