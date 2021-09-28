@@ -1,7 +1,5 @@
 //- 40-layouts/container
 
-$space: 5vw;
-
 // Mixins
 @mixin make-container-fluid-right($max-width) {
   $media-width: $max-width + $max-width * 0.05;
@@ -9,8 +7,8 @@ $space: 5vw;
   width: calc(100% - ((100% - #{$max-width}) / 2));
 
   @media (max-width: #{$media-width}) {
-    padding-left: #{$space};
-    padding-right: #{$space};
+    padding-left: #{$container-space};
+    padding-right: #{$container-space};
     width: auto;
   }
 }
@@ -21,8 +19,8 @@ $space: 5vw;
   width: calc(100% - ((100% - #{$max-width}) / 2));
 
   @media (max-width: #{$media-width}) {
-    padding-left: #{$space};
-    padding-right: #{$space};
+    padding-left: #{$container-space};
+    padding-right: #{$container-space};
     width: auto;
   }
 }
@@ -31,8 +29,12 @@ $space: 5vw;
   box-sizing: content-box /* 1 */;
   margin-left: auto;
   margin-right: auto;
-  padding-left: #{$space};
-  padding-right: #{$space};
+  padding-left: #{$container-space};
+  padding-right: #{$container-space};
+
+  &--xl {
+	  max-width: #{$container-size-xl};
+  }
 
   &--lg {
 	  max-width: #{$container-size-lg};
@@ -61,6 +63,10 @@ $space: 5vw;
       @include make-container-fluid-right($container-size-md);
     }
 
+    &.container--xl {
+      @include make-container-fluid-right($container-size-xl);
+    }
+
     &.container--lg {
       @include make-container-fluid-right($container-size-lg);
     }
@@ -79,6 +85,10 @@ $space: 5vw;
 
     &.container--md {
       @include make-container-fluid-left($container-size-md);
+    }
+
+    &.container--xl {
+      @include make-container-fluid-left($container-size-xl);
     }
 
     &.container--lg {

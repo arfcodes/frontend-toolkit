@@ -503,6 +503,9 @@ p {
   padding-left: 5vw;
   padding-right: 5vw;
 }
+.container--xl {
+  max-width: 90rem;
+}
 .container--lg {
   max-width: 82rem;
 }
@@ -527,6 +530,17 @@ p {
 }
 @media (max-width: 73.5rem) {
   .container--fluid-right.container--md {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: auto;
+  }
+}
+.container--fluid-right.container--xl {
+  padding-left: calc((100% - 90rem) / 2);
+  width: calc(100% - (100% - 90rem) / 2);
+}
+@media (max-width: 94.5rem) {
+  .container--fluid-right.container--xl {
     padding-left: 5vw;
     padding-right: 5vw;
     width: auto;
@@ -574,6 +588,17 @@ p {
 }
 @media (max-width: 73.5rem) {
   .container--fluid-left.container--md {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    width: auto;
+  }
+}
+.container--fluid-left.container--xl {
+  padding-right: calc((100% - 90rem) / 2);
+  width: calc(100% - (100% - 90rem) / 2);
+}
+@media (max-width: 94.5rem) {
+  .container--fluid-left.container--xl {
     padding-left: 5vw;
     padding-right: 5vw;
     width: auto;

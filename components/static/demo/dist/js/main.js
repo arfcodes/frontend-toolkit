@@ -21,24 +21,14 @@ module.exports=[
     "label": "Layout",
     "subs": [
       {
-        "id": "layout-container",
-        "path": "layout/container",
-        "label": "Container"
-      },
-      {
-        "id": "layout-sidebar",
-        "path": "layout/sidebar",
-        "label": "Sidebar"
-      },
-      {
-        "id": "layout-switcher",
-        "path": "layout/switcher",
-        "label": "Switcher"
-      },
-      {
         "id": "layout-cluster",
         "path": "layout/cluster",
         "label": "Cluster"
+      },
+      {
+        "id": "layout-container",
+        "path": "layout/container",
+        "label": "Container"
       },
       {
         "id": "layout-cover",
@@ -49,6 +39,16 @@ module.exports=[
         "id": "layout-frame",
         "path": "layout/frame",
         "label": "Frame"
+      },
+      {
+        "id": "layout-sidebar",
+        "path": "layout/sidebar",
+        "label": "Sidebar"
+      },
+      {
+        "id": "layout-switcher",
+        "path": "layout/switcher",
+        "label": "Switcher"
       }
     ]
   }

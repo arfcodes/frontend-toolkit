@@ -81,8 +81,8 @@ so that either of these properties is applied instead.
     margin-right: 0;
     
     > * {
-    margin-left: 0;
-    margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }

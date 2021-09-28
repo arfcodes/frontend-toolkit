@@ -37,6 +37,12 @@
     width: 100%;
   }
 
+  &--reverse {
+    > * {
+      flex-direction: row-reverse;
+    }
+  }
+
   &--no-space {
     > * {
       margin: 0;

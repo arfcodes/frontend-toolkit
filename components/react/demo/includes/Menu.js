@@ -71,16 +71,31 @@ const Menu = () => {
           <div className="d-menu__content__main">
             <ul>
               {NavData.map((item) => (
-                <li key={`nav-${item.id}`}>
+                <li key={`nav-${item.id}`} data-id={item.id}>
                   <NavLink
                     className="d-menu__link"
                     activeClassName="d-menu__link--active"
-                    to={`/${item.id}`}
-                    data-id={item.id}
+                    to={`/${item.path}`}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
                   </NavLink>
+                  {typeof item.subs !== 'undefined' && item.subs.length > 0 ? (
+                    <ul className="d-menu__subs">
+                      {item.subs.map((itemSub) => (
+                        <li key={`nav-${itemSub.id}`} data-id={itemSub.id}>
+                          <NavLink
+                            className="d-menu__link"
+                            activeClassName="d-menu__link--active"
+                            to={`/${itemSub.path}`}
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {itemSub.label}
+                          </NavLink>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : null}
                 </li>
               ))}
               <li />
