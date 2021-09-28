@@ -7,6 +7,13 @@ body {
   font-family: $font-main;
 }
 
+// Main
+.d-main {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+// Menu
 .d-menu {
   &__trigger {
     position: fixed;
@@ -57,6 +64,7 @@ body {
     opacity: 0;
     transform: translateX(110%);
     transition: all 0.4s;
+    overflow: auto;
 
     &__inner {
       padding: 1.5rem;
@@ -81,13 +89,30 @@ body {
 
       > ul {
         > li {
+          border-bottom: 1px solid #777777;
           > a {
             padding: 1.25rem 0;
-            border-bottom: 1px solid #777777;
 
             &:hover {
               background-color: #111111;
               padding-left: 1rem;
+            }
+          }
+        }
+      }
+
+      .d-menu__subs {
+        padding-left: 1rem;
+        margin-top: .625rem;
+
+        > li {
+          margin-bottom: 1.2rem;
+          > a {
+            color: #bbbbbb;
+            font-size: .75rem;
+    
+            &:hover {
+              color: #ffffff;
             }
           }
         }
@@ -118,4 +143,8 @@ body {
       transform: translateX(0);
     }
   }
+}
+
+.d-block {
+  padding: 2rem;
 }

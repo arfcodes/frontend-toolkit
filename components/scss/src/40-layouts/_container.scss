@@ -1,0 +1,106 @@
+//- 40-layouts/container
+
+// Mixins
+@mixin make-container-fluid-right($max-width) {
+  $media-width: $max-width + $max-width * 0.05;
+  padding-left: calc((100% - #{$max-width}) / 2);
+  width: calc(100% - ((100% - #{$max-width}) / 2));
+
+  @media (max-width: #{$media-width}) {
+    padding-left: #{$container-space};
+    padding-right: #{$container-space};
+    width: auto;
+  }
+}
+
+@mixin make-container-fluid-left($max-width) {
+  $media-width: $max-width + $max-width * 0.05;
+  padding-right: calc((100% - #{$max-width}) / 2);
+  width: calc(100% - ((100% - #{$max-width}) / 2));
+
+  @media (max-width: #{$media-width}) {
+    padding-left: #{$container-space};
+    padding-right: #{$container-space};
+    width: auto;
+  }
+}
+
+.container {
+  box-sizing: content-box /* 1 */;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: #{$container-space};
+  padding-right: #{$container-space};
+
+  &--xl {
+	  max-width: #{$container-size-xl};
+  }
+
+  &--lg {
+	  max-width: #{$container-size-lg};
+  }
+
+  &--md {
+    max-width: #{$container-size-md};
+  }
+
+  &--sm {
+	  max-width: #{$container-size-sm};
+  }
+
+  &--xs {
+	  max-width: #{$container-size-xs};
+  }
+
+  &--full {
+    max-width: none;
+  }
+
+  &--fluid-right {
+    max-width: 100%;
+
+    &.container--md {
+      @include make-container-fluid-right($container-size-md);
+    }
+
+    &.container--xl {
+      @include make-container-fluid-right($container-size-xl);
+    }
+
+    &.container--lg {
+      @include make-container-fluid-right($container-size-lg);
+    }
+
+    &.container--sm {
+      @include make-container-fluid-right($container-size-sm);
+    }
+
+    &.container--xs {
+      @include make-container-fluid-right($container-size-xs);
+    }
+  }
+
+  &--fluid-left {
+    max-width: 100%;
+
+    &.container--md {
+      @include make-container-fluid-left($container-size-md);
+    }
+
+    &.container--xl {
+      @include make-container-fluid-left($container-size-xl);
+    }
+
+    &.container--lg {
+      @include make-container-fluid-left($container-size-lg);
+    }
+
+    &.container--sm {
+      @include make-container-fluid-left($container-size-sm);
+    }
+
+    &.container--xs {
+      @include make-container-fluid-left($container-size-xs);
+    }
+  }
+}

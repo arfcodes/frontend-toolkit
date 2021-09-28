@@ -1,0 +1,53 @@
+
+extends ../../includes/layout
+
+block vars
+  - var pageTitle      = 'Layout - Cover | Demo Static Components';
+  - var pageName       = 'layout';
+  - var bodyClass      = 'layout';
+  - var subpath        = true;
+
+block main
+
+  .container.container--full
+    h1 Cover Demo 
+
+    .d-block.bg--primary.text--white
+      +text-sample-short
+  
+  br
+  br
+  br
+  .container.container--full
+    h2 .cover
+    .cover.bg--primary.text--white
+      .cover__header
+        h2 Cover Header
+      .cover__main
+        +text-sample-short
+      .cover__bottom
+        p 
+          strong Cover Bottom
+  
+  br
+  br
+  br
+  .container.container--full
+    h2 .cover
+    .cover.bg--primary.text--white
+      .cover__header.center
+        h2 Cover Header
+      .cover__main
+        +text-sample-short
+      .cover__bottom.center
+        p 
+          strong Cover Bottom
+  
+  br
+  br
+  br
+  .container.container--full
+    h2 .cover
+    .cover.bg--primary.text--white
+      .cover__main
+        +text-sample-short

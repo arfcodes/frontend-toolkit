@@ -1,0 +1,41 @@
+extends ../../includes/layout
+
+block vars
+  - var pageTitle      = 'Layout - Frame | Demo Static Components';
+  - var pageName       = 'layout';
+  - var bodyClass      = 'layout';
+  - var subpath        = true;
+
+block main
+
+  .container.container--xs
+    h1 Frame Demo 
+
+    .d-block.bg--primary.text--white
+      +text-sample-short
+  
+  br
+  br
+  br
+  .container.container--xs
+    h2 .frame.frame--16-9
+    .frame.frame--16-9
+      img(src="https://placeimg.com/1000/1000/any" alt="")
+
+    br
+    br
+    h2 .frame.frame--3-2
+    .frame.frame--3-2
+      img(src="https://placeimg.com/1000/1000/any" alt="")
+
+    br
+    br
+    h2 .frame.frame--4-3
+    .frame.frame--4-3
+      img(src="https://placeimg.com/1000/1000/any" alt="")
+
+    br
+    br
+    h2 .frame.frame--square
+    .frame.frame--square
+      img(src="https://placeimg.com/1000/1000/any" alt="")

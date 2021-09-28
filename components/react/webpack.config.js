@@ -86,6 +86,7 @@ module.exports = {
         minifyURLs: true,
       },
       inject: true,
+      publicPath: '/',
     }),
   ],
   resolve: {
@@ -93,10 +94,12 @@ module.exports = {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
       '@': path.join(__dirname, '/src'),
+      '@components': path.join(__dirname, '/src/components'),
       '@root': path.join(__dirname, '../..'),
       '@rootImages': path.join(__dirname, '../../assets/images'),
       '@rootData': path.join(__dirname, '../../assets/data'),
       '@demo': path.join(__dirname, '/demo'),
     },
   },
+  target: 'web', // Make web variables accessible to webpack, e.g. window
 };

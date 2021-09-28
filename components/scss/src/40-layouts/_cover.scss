@@ -1,3 +1,7 @@
+//- 40-layouts/cover
+//-
+//- From: https://design-system.w3.org/
+
 /*------------------------------------*\
     #Cover layout primitive
 
@@ -12,23 +16,23 @@
     /90-utilities/layout
 \*------------------------------------*/
 
-.l-cover {
-	display: flex;
-	flex-direction: column;
-	min-height: 30vh;
-	padding: 1rem;
+.cover {
+  display: flex;
+  flex-direction: column;
+  min-height: 30vh;
+  padding: 1rem;
 }
 
 
-.l-cover > * {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
+.cover > * {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 
-.l-cover > .principal {
-	margin-top: auto;
-	margin-bottom: auto;
+.cover > .cover__main {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 
@@ -36,10 +40,10 @@
 These styles space out an optional header/footer area without
 disturbing the vertically centered element.
  */
-.l-cover > :first-child:not(.principal) {
-	margin-top: 0;
+.cover > :first-child:not(.cover__main) {
+  margin-top: 0;
 }
 
-.l-cover > :last-child:not(.principal) {
-	margin-bottom: 0;
+.cover > :last-child:not(.cover__main) {
+  margin-bottom: 0;
 }

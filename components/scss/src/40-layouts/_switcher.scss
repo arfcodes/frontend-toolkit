@@ -1,3 +1,7 @@
+//- 40-layouts/switcher
+//-
+//- From: https://design-system.w3.org/
+
 /*------------------------------------*\
     #Switcher layout primitive
 
@@ -9,22 +13,22 @@
     using viewport media queries.
 
     The child elements in the horizontal configuration will be of equal
-	width.
+  width.
 
-	To apply gutter spacing, apply padding to the flex items and an
+  To apply gutter spacing, apply padding to the flex items and an
     equivalent negative margin to the flex container. This will double up,
     so use half the intended value.
 
 \*------------------------------------*/
-
-.l-switcher {
-	overflow: hidden;
+.switcher {
+  overflow: hidden;
 }
 
 
-.l-switcher > * {
-	display: flex;
-	flex-flow: row wrap;
+.switcher > * {
+  display: flex;
+  flex-flow: row wrap;
+  margin: -.625rem;
 }
 
 /**
@@ -37,8 +41,48 @@ the width of the columns' parent container. This calculation will create a
 value that's either bigger than the max-width or smaller than the min-width,
 so that either of these properties is applied instead.
  */
-.l-switcher > * > * {
-	max-width: 100%; /* 1 */
-	min-width: 50%; /* 2 */
-	width: calc(690px * 690 - 100% * 690); /* 3 */
+.switcher > * > * {
+  max-width: 100%; /* 1 */
+  min-width: 33.333333%; /* 2 */
+  width: calc(690px * 690 - 100% * 690); /* 3 */
+  padding: .625rem;
+  box-sizing: border-box;
+}
+
+.switcher--50 > * > * {
+  min-width: 50%;
+}
+
+.switcher--25 > * > * {
+  max-width: 50%; /* 1 */
+  min-width: 25%;
+  width: calc(780px * 780 - 100% * 780); /* 3 */
+
+  @media (max-width: 30rem) {
+    max-width: 100%;
+  }
+}
+
+
+.switcher--no-space {
+  > * {
+    margin: 0;
+    
+    > * {
+      padding: 0;
+      box-sizing: content-box;
+    }
+  }
+}
+
+.switcher--no-space-x {
+  > * {
+    margin-left: 0;
+    margin-right: 0;
+    
+    > * {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
