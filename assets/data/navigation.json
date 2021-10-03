@@ -12,6 +12,11 @@
     "type": "all",
     "subs": [
       {
+        "id": "button-default",
+        "path": "button/default",
+        "label": "Default"
+      },
+      {
         "id": "button-style1",
         "path": "button/style1",
         "label": "Style 1"

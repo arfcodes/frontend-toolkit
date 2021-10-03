@@ -1,0 +1,115 @@
+
+extends ../../includes/layout
+
+block vars
+  - var pageTitle      = 'Button Default - Demo Static Components';
+  - var pageName       = 'button';
+  - var bodyClass      = 'button';
+  - var subpath        = true;
+
+//-
+//- Render buttons
+//-
+//- Use button mixin
+//-
+mixin render-buttons(variant, icon = false, iconPos = 'right')
+  .cluster.cluster--center
+    .cluster__row
+      .cluster__column
+        +button('Read More', 'default button--'+variant, '2xs', icon, iconPos)
+      .cluster__column
+        +button('Read More', 'default button--'+variant, 'xs', icon, iconPos)
+      .cluster__column
+        +button('Read More', 'default button--'+variant, 'sm', icon, iconPos)
+      .cluster__column
+        +button('Read More', 'default button--'+variant, 'md', icon, iconPos)
+      .cluster__column
+        +button('Read More', 'default button--'+variant, 'lg', icon, iconPos)
+      .cluster__column
+        +button('Read More', 'default button--'+variant, 'xl', icon, iconPos)
+      .cluster__column
+        +button('Read More', 'default button--'+variant, '2xl', icon, iconPos)
+//-
+//- Render button block mixin
+//-
+mixin render-buttons-block(variant, icon = false, iconPos = 'right')
+  h3= '.button--'+variant
+  +button('Read More', 'default button--full button--'+variant, '2xs', icon, iconPos)
+  br
+  +button('Read More', 'default button--full button--'+variant, 'xs', icon, iconPos)
+  br
+  +button('Read More', 'default button--full button--'+variant, 'sm', icon, iconPos)
+  br
+  +button('Read More', 'default button--full button--'+variant, 'md', icon, iconPos)
+  br
+  +button('Read More', 'default button--full button--'+variant, 'lg', icon, iconPos)
+  br
+  +button('Read More', 'default button--full button--'+variant, 'xl', icon, iconPos)
+  br
+  +button('Read More', 'default button--full button--'+variant, '2xl', icon, iconPos)
+  br
+
+block main
+  .container.container--xl
+    h1 Button Default
+    br
+    br
+
+    h3 .button--primary
+    +render-buttons('primary')
+    br
+
+    h3 .button--secondary
+    +render-buttons('secondary')
+    br
+
+    h3 .button--success
+    +render-buttons('success')
+    br
+
+    h3 .button--danger
+    +render-buttons('danger')
+    br
+
+    h3 .button--warning
+    +render-buttons('warning')
+    br
+
+    h3 .button--info
+    +render-buttons('info')
+    br
+
+    h3 .button--grey
+    +render-buttons('grey')
+    br
+
+    h3 .button--black
+    +render-buttons('black')
+    br
+
+    h3 .button--white
+    .d-block.bg--black
+      +render-buttons('white')
+    br
+
+    h2 Button With Icon
+    h3 position: right
+    +render-buttons('primary', 'arrow-right')
+    h3 position: left
+    +render-buttons('primary', 'search', 'left')
+    br
+  
+  br
+  br
+  .container.container--xs
+    h2 Button full
+    +render-buttons-block('primary')
+    +render-buttons-block('secondary')
+    +render-buttons-block('success')
+    +render-buttons-block('danger')
+    +render-buttons-block('warning')
+    +render-buttons-block('info')
+    +render-buttons-block('grey')
+    +render-buttons-block('black')
+    .d-block.bg--black.text--white
+      +render-buttons-block('white')

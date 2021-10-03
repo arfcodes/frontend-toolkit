@@ -32,6 +32,16 @@
     + .button__label {
       margin-left: 1rem;
     }
+
+    i {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    svg {
+      width: 1.4em;
+      height: 1.4em;
+    }
   }
 
   &:hover {
@@ -47,6 +57,12 @@
   &.disabled,
   &[disabled] {
     cursor: not-allowed;
-    opacity: 0.95;
+    opacity: 0.5;
+  }
+
+  // Full width
+  &--full {
+    display: block;
+    width: 100%;
   }
 }
