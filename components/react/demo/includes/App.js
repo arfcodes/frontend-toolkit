@@ -5,7 +5,11 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from '../pages/Home';
+
 import Button from '../pages/Button';
+import ButtonDefault from '../pages/Button/Default';
+import ButtonStyle1 from '../pages/Button/Style1';
+
 import Layout from '../pages/Layout';
 import LayoutContainer from '../pages/Layout/Container';
 import LayoutSidebar from '../pages/Layout/Sidebar';
@@ -25,7 +29,11 @@ const App = () => (
         <div className={styles.content}>
           <Switch>
             <Route path="/" component={Home} exact />
-            <Route path="/button" component={Button} />
+
+            <Route path="/button" component={Button} exact />
+            <Route path="/button/default" component={ButtonDefault} />
+            <Route path="/button/style1" component={ButtonStyle1} />
+
             <Route path="/layout" component={Layout} exact />
             <Route path="/layout/container" component={LayoutContainer} />
             <Route path="/layout/sidebar" component={LayoutSidebar} />

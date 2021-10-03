@@ -12,6 +12,7 @@
   flex-direction: row;
   align-items: center;
   transition: all 0.4s;
+  box-sizing: border-box;
 
   &__content {
     display: flex;
