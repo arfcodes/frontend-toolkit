@@ -1,6 +1,6 @@
 //-
 //- Button mixin
-mixin button__content(label, type, icon = 'arrow-right', iconPos = 'right')
+mixin button__content(label, type, icon = false, iconPos = 'right')
   span.button__content
     if iconPos == 'left'
       +button__icon(icon)
@@ -9,7 +9,7 @@ mixin button__content(label, type, icon = 'arrow-right', iconPos = 'right')
     if iconPos == 'right'
       +button__icon(icon)
       
-mixin button__icon(icon = 'arrow-right')
+mixin button__icon(icon = false)
   if icon
     span.button__icon
       if icon == 'arrow-right'
@@ -26,25 +26,25 @@ mixin button__icon(icon = 'arrow-right')
           +icon__search()
 
 //- Button mixin
-mixin button(label, variant = 'white', size = 'md', icon = 'arrow-right', iconPos = 'right')
+mixin button(label, variant = 'primary', size = 'md', icon = false, iconPos = 'right')
   button(type="button", class="button button--"+variant+" button--"+size)&attributes(attributes)
     +button__content(label, type, icon, iconPos)
 
 //- Button link mixin
-mixin button-link(label, link, variant = 'white', size = 'md', icon = 'arrow-right', iconPos = 'right')
+mixin button-link(label, link, variant = 'primary', size = 'md', icon = false, iconPos = 'right')
   a(href=link, class="button button--"+variant+" button--"+size)&attributes(attributes)
     +button__content(label, type, icon, iconPos)
 
 //- Button linkedin mixin
 mixin button-linkedin(link)
-  +button-link('Linkedin Profile', link, 'white', 'md', 'linkedin', 'left')
+  +button-link('Linkedin Profile', link, 'primary', 'md', 'linkedin', 'left')
 
 //- Button line mixin
-mixin button-line(label, variant = 'white', size = 'md', icon = false, iconPos = 'right')
+mixin button-line(label, variant = 'primary', size = 'md', icon = false, iconPos = 'right')
   +button(label, 'line ' + 'button--'+variant, size, icon, iconPos)
 
 //- Button link line mixin
-mixin button-link-line(label, link, variant = 'white', size = 'md', icon = false, iconPos = 'right')
+mixin button-link-line(label, link, variant = 'primary', size = 'md', icon = false, iconPos = 'right')
   +button-link(label, link, 'line ' + 'button--'+variant, size, icon, iconPos)
 
 //- Button social mixin
