@@ -3,7 +3,6 @@
  *
  * Use Spinkit (https://github.com/tobiasahlin/SpinKit)
  */
-import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
