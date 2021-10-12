@@ -1,5 +1,6 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const pluginNpm2Yarn = require('@docusaurus/remark-plugin-npm2yarn');
 
 // With JSDoc @type annotations, IDEs can provide config autocompletion
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
@@ -15,6 +16,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
     organizationName: 'arfcodes', // Usually your GitHub org/user name.
     projectName: '@arfcodes/frontend-toolkit', // Usually your repo name.
 
+    themes: ['@docusaurus/theme-live-codeblock'],
+
     presets: [
       [
         '@docusaurus/preset-classic',
@@ -25,6 +28,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             // Please change this to your repo.
             editUrl:
               'https://github.com/facebook/docusaurus/edit/main/website/',
+            remarkPlugins: [[pluginNpm2Yarn, { sync: true }]],
           },
           tips: {
             sidebarPath: require.resolve('./sidebars.js'),
