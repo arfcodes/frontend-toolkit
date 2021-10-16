@@ -1,0 +1,37 @@
+{
+  "name": "@arfcodes/fe-cli",
+  "version": "0.0.1",
+  "description": "CLI tools for frontend",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arfcodes/frontend-toolkit.git",
+    "directory": "packages/fe-cli"
+  },
+  "bugs": {
+    "url": "https://github.com/arfcodes/frontend-toolkit/issues"
+  },
+  "homepage": "https://github.com/arfcodes/frontend-toolkit#readme",
+  "keywords": [
+    "web",
+    "frontend",
+    "cli",
+    "toolkit"
+  ],
+  "author": "M Arif Mahthunisnaini <arfcodes@gmail.com>",
+  "license": "MIT",
+  "scripts": {},
+  "bin": {
+    "fe-cli": "./index.js"
+  },
+  "dependencies": {
+    "async-retry": "^1.3.3",
+    "chalk": "^4.1.2",
+    "commander": "^8.2.0",
+    "fs-extra": "^10.0.0",
+    "got": "^11.8.2",
+    "inquirer": "^8.2.0",
+    "ncp": "^2.0.0",
+    "stream": "^0.0.2",
+    "tar": "^6.1.11"
+  }
+}
