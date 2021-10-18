@@ -36,7 +36,7 @@
     "lint:react": "yarn workspace react-components lint",
     "lint:static": "yarn workspace web-static-components lint",
     "commit": "git-cz",
-    "release:version:packages": "lerna version --no-private",
+    "release:version:packages": "lerna version --exact --no-private --no-git-tag-version",
     "release:publish:packages": "lerna publish --no-private"
   },
   "circular-dependency-plugin": "^5.2.2",
