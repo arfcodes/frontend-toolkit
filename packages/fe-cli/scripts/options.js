@@ -12,21 +12,21 @@ options.type = [
     name: 'React',
     value: 'react',
   },
-  {
-    name: 'SolidJs',
-    value: 'solid',
-  },
-  {
-    name: 'Vue',
-    value: 'vue',
-  }
+  // {
+  //   name: 'SolidJs',
+  //   value: 'solid',
+  // },
+  // {
+  //   name: 'Vue',
+  //   value: 'vue',
+  // }
 ];
 
 // React
 options.react = [
   {
-    name: 'Basic',
-    value: 'basic',
+    name: 'Basic Webpack',
+    value: 'basic-webpack',
   },
   // {
   //   name: 'Typescript',
