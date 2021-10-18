@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/arfcodes/frontend-toolkit/compare/@arfcodes/fe-cli@0.1.1...@arfcodes/fe-cli@0.1.2) (2021-10-18)
+
+
+### Bug Fixes
+
+* **cli:** add cli options ([59e6642](https://github.com/arfcodes/frontend-toolkit/commit/59e664257720fd28c509d62c66b36f16527a32cc))
+
+
+
+
+
 ## 0.1.1 (2021-10-18)
 
 
