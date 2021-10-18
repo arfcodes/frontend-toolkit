@@ -2,7 +2,7 @@
   "name": "vue-components",
   "private": true,
   "description": "Vue components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": {
     "name": "M Arif Mahthunisnaini",
@@ -13,6 +13,5 @@
     "url": "https://github.com/arfcodes/frontend-toolkit",
     "directory": "components/vue"
   },
-  "scripts": {},
-  "dependencies": {}
+  "scripts": {}
 }

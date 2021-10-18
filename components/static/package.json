@@ -2,7 +2,7 @@
   "name": "web-static-components",
   "private": true,
   "description": "Web static components",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "MIT",
   "author": {
     "name": "M Arif Mahthunisnaini",
@@ -43,6 +43,6 @@
     "tsify": "^5.0.2"
   },
   "dependencies": {
-    "scss-components": "0.0.1"
+    "scss-components": "0.1.0"
   }
 }
