@@ -34,5 +34,9 @@
     "stream": "^0.0.2",
     "tar": "^6.1.11"
   },
-  "gitHead": "9ba1bb179a67fec66b0435d1dd7b97555c5ad0bb"
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public"
+  },
+  "gitHead": "dc11c65eb84bd5e999cd71edc7edae4a9da5354e"
 }
