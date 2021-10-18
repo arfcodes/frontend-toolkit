@@ -12,10 +12,10 @@ options.type = [
     name: 'React',
     value: 'react',
   },
-  // {
-  //   name: 'NextJs',
-  //   value: 'nextjs',
-  // },
+  {
+    name: 'NextJs',
+    value: 'nextjs',
+  },
   // {
   //   name: 'SolidJs',
   //   value: 'solid',
@@ -35,6 +35,34 @@ options.react = [
   {
     name: 'Basic Webpack',
     value: 'basic-webpack',
+  },
+  // {
+  //   name: 'Basic Rollup',
+  //   value: 'basic-rollup',
+  // },
+  // {
+  //   name: 'Typescript Webpack',
+  //   value: 'typescript-webpack',
+  // },
+  // {
+  //   name: 'Typescript Rollup',
+  //   value: 'typescript-rollup',
+  // },
+  // {
+  //   name: 'Simple CMS',
+  //   value: 'simple_cms',
+  // },
+  // {
+  //   name: 'Auth',
+  //   value: 'auth',
+  // }
+];
+
+// NextJs
+options.nextjs = [
+  {
+    name: 'Basic Strapi',
+    value: 'basic-strapi',
   },
   // {
   //   name: 'Basic Rollup',

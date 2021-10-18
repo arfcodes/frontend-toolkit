@@ -12,7 +12,6 @@ const packageJson = require('../package.json');
 const options = require('./options.js');
 const git = require('./git.js');
 const helpers = require('./helpers.js');
-const install = require('./install.js');
 
 ncp.limit = 16;
 
@@ -121,6 +120,8 @@ function prompts() {
             let sassPath = '';
             if (type === 'grunt') {
               sassPath = `${appPath}/resources/scss/src`;
+            } else if (type === 'nextjs') {
+              sassPath = `${appPath}/styles`;
             } else {
               sassPath = `${appPath}/src/styles`;
             }
@@ -172,6 +173,8 @@ function prompts() {
             let compPath = '';
             if (type === 'grunt') {
               compPath = `${appPath}/resources`;
+            } else if (type === 'nextjs') {
+              compPath = appPath;
             } else {
               compPath = `${appPath}/src`;
             }

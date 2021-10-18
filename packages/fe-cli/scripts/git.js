@@ -19,7 +19,10 @@ function downloadAndExtractSass(rootPath) {
  * Download and extract components
  */
 function downloadAndExtractComponents(rootPath, name) {
-  const repoDir = `components/${name}`;
+  let repoDir = `components/${name}`;
+  if (name === 'nextjs') {
+    repoDir = 'components/react';
+  }
   return downloadAndExtract(rootPath, 'frontend-toolkit', repoDir);
 }
 
@@ -37,6 +40,14 @@ function downloadAndExtractReact(rootPath, template) {
 function downloadAndExtractGruntJs(rootPath, template) {
   const repoDir = `templates/${template}`;
   return downloadAndExtract(rootPath, 'gruntjs-starter', repoDir);
+}
+
+/**
+ * Download and extract nextjs
+ */
+function downloadAndExtractNextJs(rootPath, template) {
+  const repoDir = `templates/${template}`;
+  return downloadAndExtract(rootPath, 'nextjs-starter', repoDir);
 }
 
 /**
@@ -75,6 +86,8 @@ function downloadAndExtract(rootPath, packageName, repoDir = false, repoBranch =
 function downloadAndExtractStarter(rootPath, type, template) {
   if (type === 'react') {
     return downloadAndExtractReact(rootPath, template);
+  } else if (type === 'nextjs') {
+    return downloadAndExtractNextJs(rootPath, template);
   } else if (type === 'solid') {
     return downloadAndExtractSolidJs(rootPath, template);
   } else if (type === 'grunt') {
