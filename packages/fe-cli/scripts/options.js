@@ -13,6 +13,10 @@ options.type = [
     value: 'react',
   },
   // {
+  //   name: 'NextJs',
+  //   value: 'nextjs',
+  // },
+  // {
   //   name: 'SolidJs',
   //   value: 'solid',
   // },

@@ -33,5 +33,6 @@
     "ncp": "^2.0.0",
     "stream": "^0.0.2",
     "tar": "^6.1.11"
-  }
+  },
+  "gitHead": "6cbfc1e955990bb8eae5de36ea7fcf303b277ae8"
 }
