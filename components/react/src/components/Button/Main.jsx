@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import Link from '../Link';
 
 const Button = (props) => {
   const { path, handler, isLinkOutside, buttonProps, className, children } =
@@ -32,7 +32,7 @@ const Button = (props) => {
               {children}
             </a>
           ) : (
-            <Link className={className} to={path} {...buttonProps}>
+            <Link className={className} path={path} {...buttonProps}>
               {children}
             </Link>
           )}
