@@ -23,6 +23,10 @@ options.type = [
   // {
   //   name: 'Vue',
   //   value: 'vue',
+  // },
+  // {
+  //   name: 'Eleventy',
+  //   value: 'eleventy',
   // }
 ];
 
@@ -32,6 +36,10 @@ options.react = [
     name: 'Basic Webpack',
     value: 'basic-webpack',
   },
+  // {
+  //   name: 'Basic Rollup',
+  //   value: 'basic-rollup',
+  // },
   // {
   //   name: 'Typescript',
   //   value: 'typescript',
