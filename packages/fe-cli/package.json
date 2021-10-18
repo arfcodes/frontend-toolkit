@@ -35,8 +35,7 @@
     "tar": "^6.1.11"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/",
     "access": "public"
   },
-  "gitHead": "dc11c65eb84bd5e999cd71edc7edae4a9da5354e"
+  "gitHead": "3769eb207c8108a1513b08c3b103d627de7cdb6e"
 }
