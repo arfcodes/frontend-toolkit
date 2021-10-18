@@ -41,8 +41,12 @@ options.react = [
   //   value: 'basic-rollup',
   // },
   // {
-  //   name: 'Typescript',
-  //   value: 'typescript',
+  //   name: 'Typescript Webpack',
+  //   value: 'typescript-webpack',
+  // },
+  // {
+  //   name: 'Typescript Rollup',
+  //   value: 'typescript-rollup',
   // },
   // {
   //   name: 'Simple CMS',
