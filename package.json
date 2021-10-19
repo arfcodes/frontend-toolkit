@@ -39,7 +39,7 @@
     "lint:static": "yarn workspace web-static-components lint",
     "commit": "git-cz",
     "release:version:packages": "lerna version --exact --no-private --no-git-tag-version",
-    "release:publish:packages": "lerna publish --no-private"
+    "release:publish:packages": "lerna publish from-package"
   },
   "circular-dependency-plugin": "^5.2.2",
   "compression-webpack-plugin": "^7.1.2",
