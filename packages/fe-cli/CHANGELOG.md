@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/arfcodes/frontend-toolkit/compare/@arfcodes/fe-cli@0.1.5...@arfcodes/fe-cli@0.2.2) (2021-10-19)
+
+
+### Bug Fixes
+
+* **cli:** fix get nextjs components ([e0f5081](https://github.com/arfcodes/frontend-toolkit/commit/e0f508131fdd6f1c0ea0bee4f3d060511b977fa4))
+
+
+### Features
+
+* **cli:** add next js for cli options ([aff83af](https://github.com/arfcodes/frontend-toolkit/commit/aff83af393e04c65fd04fa7fdbc24e867cf38453))
+
+
+
+
+
 ## [0.2.1](https://github.com/arfcodes/frontend-toolkit/compare/@arfcodes/fe-cli@0.1.5...@arfcodes/fe-cli@0.2.1) (2021-10-19)
 
 

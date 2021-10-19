@@ -156,7 +156,9 @@ function prompts() {
               packageJsonData = helpers.updatePackageJsonData('devDependencies', packageJsonData, sassPackageJsonData);
 
               // Remove temp directory
-              fsExtra.rmSync(tempSassPath, { recursive: true, force: true });
+              await helpers.asyncDelay(() => {
+                fsExtra.rmSync(tempSassPath, { recursive: true, force: true });
+              });
 
             } catch(error) {
               console.log(chalk.red('Download SASS files error.'));
@@ -217,7 +219,9 @@ function prompts() {
               packageJsonData = helpers.updatePackageJsonData('devDependencies', packageJsonData, compPackageJsonData);
 
               // Remove temp directory
-              fsExtra.rmSync(tempCompPath, { recursive: true, force: true });
+              await helpers.asyncDelay(() => {
+                fsExtra.rmSync(tempCompPath, { recursive: true, force: true });
+              });
 
               // Get next js components
               if (type === 'nextjs') {
@@ -240,8 +244,6 @@ function prompts() {
                   // Copying all files
                   await helpers.CopyDirectoryFiles(`${tempNextCompPath}/src`, compPath);
 
-                  console.log(chalk.green('Success add nextjs components.'));
-
                   // Get package.json content
                   var nextPackageJsonFile = `${tempNextCompPath}/package.json`;
                   var nextPackageJsonContent = fsExtra.readFileSync(nextPackageJsonFile, 'utf8');
@@ -250,7 +252,11 @@ function prompts() {
                   packageJsonData = helpers.updatePackageJsonData('devDependencies', packageJsonData, nextPackageJsonData);
 
                   // Remove temp directory
-                  fsExtra.rmSync(tempNextCompPath, { recursive: true, force: true });
+                  await helpers.asyncDelay(() => {
+                    fsExtra.rmSync(tempNextCompPath, { recursive: true, force: true });
+                  });
+                  
+                  console.log(chalk.green('Success add nextjs components.'));
 
                 } catch(error) {
                   console.log(chalk.yellow('Failed get nextjs components.'));

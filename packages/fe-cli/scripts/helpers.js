@@ -59,8 +59,21 @@ function CopyDirectoryFiles(original, target, options = {}) {
   });
 }
 
+/**
+ * asyncDelay
+ */
+function asyncDelay(callback, timeout = 500) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      callback();
+      resolve();
+    }, timeout);
+  });
+}
+
 module.exports = {
   removeFiles,
   updatePackageJsonData,
   CopyDirectoryFiles,
+  asyncDelay,
 };
