@@ -1,0 +1,33 @@
+{
+  "name": "nextjs-components",
+  "private": true,
+  "description": "Next Js components",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "M Arif Mahthunisnaini",
+    "url": "http://iznyn.github.io/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arfcodes/frontend-toolkit",
+    "directory": "components/nextjs"
+  },
+  "keywords": [
+    "nextjs",
+    "components"
+  ],
+  "scripts": {
+    "develop": "next dev",
+    "start": "next start",
+    "build": "next build"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "next": "^11.1.2",
+    "next-images": "^1.8.1",
+    "next-sitemap": "^1.6.184",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

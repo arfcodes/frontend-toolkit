@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": ".",
+    "paths": {
+      "@react/*": ["../react/src/components/*"],
+      "@components/*": ["src/components/*"],
+      "@includes/*": ["includes/*"],
+      "@lib/*": ["lib/*"],
+      "@pages/*": ["pages/*"],
+      "@styles/*": ["styles/*"],
+      "@services/*": ["services/*"],
+      "@helpers/*": ["helpers/*"],
+      "@rootImages/*": ["../../assets/images/*"],
+      "@rootData/*": ["../../assets/data/*"],
+    }
+  },
+  "exclude": ["node_modules"]
+}

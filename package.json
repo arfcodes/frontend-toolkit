@@ -24,10 +24,12 @@
   "scripts": {
     "dev:static": "yarn workspace web-static-components develop",
     "dev:react": "yarn workspace react-components develop",
+    "dev:next": "yarn workspace nextjs-components develop",
     "dev:solid": "yarn workspace solid-components develop",
     "dev:main": "concurrently \"yarn dev:static\" \"yarn dev:react\"",
     "build:static": "yarn workspace web-static-components build",
     "build:react": "yarn workspace react-components build",
+    "build:next": "yarn workspace nextjs-components build",
     "build:solid": "yarn workspace solid-components build",
     "docs:dev": "yarn workspace docs start",
     "docs:serve": "yarn workspace docs serve",
