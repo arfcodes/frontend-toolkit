@@ -156,7 +156,7 @@ function prompts() {
               packageJsonData = helpers.updatePackageJsonData('devDependencies', packageJsonData, sassPackageJsonData);
 
               // Remove temp directory
-              fsExtra.rmdirSync(tempSassPath, { recursive: true, force: true });
+              fsExtra.rmSync(tempSassPath, { recursive: true, force: true });
 
             } catch(error) {
               console.log(chalk.red('Download SASS files error.'));
@@ -171,10 +171,13 @@ function prompts() {
             console.log(`Try to install ${chalk.cyan(answers.type)} components`);
 
             let compPath = '';
+            let compUrl = type;
             if (type === 'grunt') {
               compPath = `${appPath}/resources`;
+              compUrl = 'static';
             } else if (type === 'nextjs') {
               compPath = appPath;
+              compUrl = 'react';
             } else {
               compPath = `${appPath}/src`;
             }
@@ -194,7 +197,7 @@ function prompts() {
               await retry(
                 () => git.downloadAndExtractComponents(
                   tempCompPath, 
-                  type === 'grunt' ? 'static' : type
+                  compUrl
                 ), 
                 {
                   retries: 3,
@@ -211,10 +214,49 @@ function prompts() {
               var compPackageJsonContent = fsExtra.readFileSync(compPackageJsonFile, 'utf8');
               var compPackageJsonData = JSON.parse(compPackageJsonContent);
               packageJsonData = helpers.updatePackageJsonData('dependencies', packageJsonData, compPackageJsonData);
-              packageJsonData = helpers.updatePackageJsonData('devDpendencies', packageJsonData, compPackageJsonData);
+              packageJsonData = helpers.updatePackageJsonData('devDependencies', packageJsonData, compPackageJsonData);
 
               // Remove temp directory
-              fsExtra.rmdirSync(tempCompPath, { recursive: true, force: true });
+              fsExtra.rmSync(tempCompPath, { recursive: true, force: true });
+
+              // Get next js components
+              if (type === 'nextjs') {
+                // Create temp directory
+                const tempNextCompPath = `${appPath}/next_components_temp`;
+                fsExtra.mkdirSync(tempNextCompPath);
+
+                // Download all components files
+                try {
+                  await retry(
+                    () => git.downloadAndExtractComponents(
+                      tempNextCompPath, 
+                      'nextjs'
+                    ), 
+                    {
+                      retries: 3,
+                    }
+                  );
+
+                  // Copying all files
+                  await helpers.CopyDirectoryFiles(`${tempNextCompPath}/src`, compPath);
+
+                  console.log(chalk.green('Success add nextjs components.'));
+
+                  // Get package.json content
+                  var nextPackageJsonFile = `${tempNextCompPath}/package.json`;
+                  var nextPackageJsonContent = fsExtra.readFileSync(nextPackageJsonFile, 'utf8');
+                  var nextPackageJsonData = JSON.parse(nextPackageJsonContent);
+                  packageJsonData = helpers.updatePackageJsonData('dependencies', packageJsonData, nextPackageJsonData);
+                  packageJsonData = helpers.updatePackageJsonData('devDependencies', packageJsonData, nextPackageJsonData);
+
+                  // Remove temp directory
+                  fsExtra.rmSync(tempNextCompPath, { recursive: true, force: true });
+
+                } catch(error) {
+                  console.log(chalk.yellow('Failed get nextjs components.'));
+                }
+                
+              }
 
             } catch(error) {
               console.log(chalk.red('Download Components error.'));

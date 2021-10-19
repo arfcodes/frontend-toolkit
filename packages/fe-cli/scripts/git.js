@@ -19,10 +19,7 @@ function downloadAndExtractSass(rootPath) {
  * Download and extract components
  */
 function downloadAndExtractComponents(rootPath, name) {
-  let repoDir = `components/${name}`;
-  if (name === 'nextjs') {
-    repoDir = 'components/react';
-  }
+  const repoDir = `components/${name}`;
   return downloadAndExtract(rootPath, 'frontend-toolkit', repoDir);
 }
 

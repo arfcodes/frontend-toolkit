@@ -47,9 +47,9 @@ function updatePackageJsonData(name, original, changes) {
 /**
  * CopyDirectoryFiles
  */
-function CopyDirectoryFiles(original, target) {
+function CopyDirectoryFiles(original, target, options = {}) {
   return new Promise((resolve, reject) => {
-    ncp(original, target, function (err) {
+    ncp(original, target, options, function (err) {
       if (err) {
         reject(err);
       } else {

@@ -3,7 +3,7 @@
  */
 import Head from 'next/head';
 
-const Home = () => ( 
+const Home = () => (
   <>
     <Head>
       <title>Demo NextJs Components</title>
