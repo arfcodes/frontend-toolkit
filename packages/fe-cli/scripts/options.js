@@ -16,10 +16,10 @@ options.type = [
     name: 'NextJs',
     value: 'nextjs',
   },
-  // {
-  //   name: 'SolidJs',
-  //   value: 'solid',
-  // },
+  {
+    name: 'SolidJs',
+    value: 'solid',
+  },
   // {
   //   name: 'Vue',
   //   value: 'vue',
