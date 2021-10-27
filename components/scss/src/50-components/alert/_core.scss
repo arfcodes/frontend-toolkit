@@ -1,0 +1,45 @@
+//- 50-components/alert/core
+
+.alert {
+  position: relative;
+  transition: all 0.4s;
+  padding: .625rem 1rem;
+
+  &[data-state="hidden"] {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__icon {
+    margin-right: 1rem;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__close {
+    margin-left: auto;
+
+    button {
+      padding: 0;
+      border: 0;
+      background-color: transparent;
+      font-size: 1.2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,5 +1,18 @@
 [
   {
+    "id": "alert",
+    "path": "alert",
+    "label": "Alert",
+    "type": "all",
+    "subs": [
+      {
+        "id": "alert-default",
+        "path": "alert/default",
+        "label": "Default"
+      }
+    ]
+  },
+  {
     "id": "box",
     "path": "box",
     "label": "Box",

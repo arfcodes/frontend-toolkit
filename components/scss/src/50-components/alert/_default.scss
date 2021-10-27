@@ -1,0 +1,59 @@
+//- 50-components/default
+
+@function set-color($color) {
+  @if (lightness($color) > 70) {
+    @return darken($color, 50);
+  }
+  @else {
+    @return lighten($color, 50);
+  }
+}
+
+.alert--default {
+  border-radius: 4px;
+
+  //
+  // Coloring
+  &.alert {
+    &--default {
+      background-color: #{$color-grey};
+      color: #444444;
+
+      .alert__close button {
+        color: #444444;
+      }
+    }
+    &--success {
+      background-color: #{$color-success};
+      color: set-color($color-success);
+
+      .alert__close button {
+        color: set-color($color-success);
+      }
+    }
+    &--warning {
+      background-color: #{$color-warning};
+      color: set-color($color-warning);
+
+      .alert__close button {
+        color: set-color($color-warning);
+      }
+    }
+    &--danger {
+      background-color: #{$color-danger};
+      color: set-color($color-danger);
+
+      .alert__close button {
+        color: set-color($color-danger);
+      }
+    }
+    &--info {
+      background-color: #{$color-info};
+      color: set-color($color-info);
+
+      .alert__close button {
+        color: set-color($color-info);
+      }
+    }
+  }
+}

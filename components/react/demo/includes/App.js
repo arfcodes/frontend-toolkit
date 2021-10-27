@@ -10,6 +10,9 @@ import Button from '../pages/Button';
 import ButtonDefault from '../pages/Button/Default';
 import ButtonStyle1 from '../pages/Button/Style1';
 
+import Alert from '../pages/Alert';
+import AlertDefault from '../pages/Alert/Default';
+
 import Layout from '../pages/Layout';
 import LayoutContainer from '../pages/Layout/Container';
 import LayoutSidebar from '../pages/Layout/Sidebar';
@@ -33,6 +36,9 @@ const App = () => (
             <Route path="/button" component={Button} exact />
             <Route path="/button/default" component={ButtonDefault} />
             <Route path="/button/style1" component={ButtonStyle1} />
+
+            <Route path="/alert" component={Alert} exact />
+            <Route path="/alert/default" component={AlertDefault} />
 
             <Route path="/layout" component={Layout} exact />
             <Route path="/layout/container" component={LayoutContainer} />
