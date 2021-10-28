@@ -1,0 +1,50 @@
+
+extends ../../includes/layout
+
+block vars
+  - var pageTitle      = 'Alert Default - Demo Static Components';
+  - var pageName       = 'alert';
+  - var bodyClass      = 'p-alert';
+  - var subpath        = true;
+
+//-
+//- Render buttons
+//-
+
+block main
+  .container.container--xl
+    h1 Alert Default
+    br
+    br
+
+    h3 .alert--default
+    +alert('This is alert default', 'default')
+    br
+
+    h3 .alert--success
+    +alert('This is alert success', 'success alert--default') 
+    br
+
+    h3 .alert--warning
+    +alert('This is alert warning', 'warning alert--default') 
+    br
+
+    h3 .alert--danger
+    +alert('This is alert danger', 'danger alert--default') 
+    br
+
+    h3 .alert--info
+    +alert('This is alert info', 'info alert--default') 
+    br
+
+    h3 Hide Icon
+    +alert('This is alert with close button', 'danger alert--default', true) 
+    br
+
+    h3 With Close Button
+    +alert('This is alert with close button', 'danger alert--default', false, true) 
+    br
+
+    h3 With Auto Close
+    +alert('This is alert with close button', 'danger alert--default', false, false, true) 
+    br

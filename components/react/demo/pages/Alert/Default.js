@@ -37,6 +37,11 @@ const AlertDefault = () => (
         This is alert info
       </Alert>
       <br />
+      <h3>Hide Icon</h3>
+      <Alert variant="danger" className="alert--default" hideIcon>
+        This is alert with no icon
+      </Alert>
+      <br />
       <h3>With Close button</h3>
       <Alert variant="danger" className="alert--default" buttonClose>
         This is alert with close button

@@ -2,8 +2,15 @@
  * Main demo scripts
  */
 import navs from '../../../../assets/data/navigation.json';
+import AlertLib from '../../src/js/components/Alert';
 
 (() => {
+  //
+  // Load Libs
+  //
+  // Alert
+  new AlertLib().init();
+
   //
   // Open/Close menu
   //
