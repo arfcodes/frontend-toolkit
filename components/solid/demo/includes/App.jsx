@@ -49,6 +49,14 @@ const routes = [
     component: lazy(() => import('../pages/Button')),
   },
   {
+    path: '/alert/default',
+    component: lazy(() => import('../pages/Alert/Default')),
+  },
+  {
+    path: '/alert',
+    component: lazy(() => import('../pages/Alert')),
+  },
+  {
     path: '/',
     component: lazy(() => import('../pages/Home')),
   },

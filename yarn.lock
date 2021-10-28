@@ -16296,6 +16296,13 @@ solid-app-router@^0.1.9:
   resolved "https://registry.yarnpkg.com/solid-app-router/-/solid-app-router-0.1.9.tgz#ab03421b4a8e8d4b2d3699908b36d5b523b0b2ba"
   integrity sha512-A6qW9EinOSBvi7BSm6pewRqosVdjYDO89XHr3M6A7spyFuqV11l3KUtDGCOMujYeP6oX1sUhMRnpEIPwC9RxoA==
 
+solid-heroicons@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/solid-heroicons/-/solid-heroicons-1.0.0.tgz#19576e0712ad65185ccc3806cd556364416560e7"
+  integrity sha512-d5WXFAHvdemmww3GtukFxZWsQUmFslo3G1OCRU0zodPXDbW/I8Y4IR7gKKvf+/eRPpNiZ9WFmzS7Rl4tdjPahg==
+  dependencies:
+    solid-js "^1.1.5"
+
 solid-js@^1.1.5, solid-js@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/solid-js/-/solid-js-1.1.6.tgz#83076ed9d3a85312549636e79858ad1daba267d8"
