@@ -32,9 +32,20 @@ title: Settings
 - ```$color-link``` -> ```$color-primary```;
 
 ### Layout
+#### Container
 - ```$container-space``` -> 5vw;
 - ```$container-size-xs``` -> 54rem;
 - ```$container-size-sm``` -> 62rem;
 - ```$container-size-md``` -> 70rem;
 - ```$container-size-lg``` -> 82rem;
 - ```$container-size-xl``` -> 90rem;
+- ```$container-space``` -> 5vw;
+
+#### Gap
+- ```$gap-size-xs``` -> 0.5rem;
+- ```$gap-size-sm``` -> 0.625rem;
+- ```$gap-size-md``` -> 1rem;
+- ```$gap-size-lg``` -> 1.5rem;
+- ```$gap-size-xl``` -> 1.8rem;
+- ```$gap-size-2xl``` -> 2.5rem;
+- ```$gap-size-3xl``` -> 3.5rem;
