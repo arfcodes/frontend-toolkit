@@ -148,3 +148,14 @@ body {
 .d-block {
   padding: 2rem;
 }
+
+// Layout grid
+.p-layout-grid {
+  .d-block {
+    padding: 1rem .5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: .6875rem;
+  }
+}

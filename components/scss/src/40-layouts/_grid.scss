@@ -1,0 +1,95 @@
+//- 40-layouts/grid
+@use "sass:math";
+
+//- Row
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: inherit;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  &--center {
+    justify-content: center;
+  }
+
+  > div {
+    box-sizing: border-box;
+  }
+}
+
+//- Columns
+@mixin get-column-width($index) {
+  max-width: #{(math.div(100%, 12) * $index)};
+  flex-basis: #{(math.div(100%, 12) * $index)};
+}
+
+.col--1 {
+  @include get-column-width(1);
+}
+.col--2 {
+  @include get-column-width(2);
+}
+.col--3 {
+  @include get-column-width(3);
+}
+.col--4 {
+  @include get-column-width(4);
+}
+.col--5 {
+  @include get-column-width(5);
+}
+.col--6 {
+  @include get-column-width(6);
+}
+.col--7 {
+  @include get-column-width(7);
+}
+.col--8 {
+  @include get-column-width(8);
+}
+.col--9 {
+  @include get-column-width(9);
+}
+.col--10 {
+  @include get-column-width(10);
+}
+.col--11 {
+  @include get-column-width(11);
+}
+.col--12 {
+  @include get-column-width(12);
+}
+
+//- Gap
+@mixin get-gap-size($size) {
+  margin: 0 -#{$size};
+
+  > div {
+    padding: 0 #{$size};
+  }
+}
+
+.gap-- {
+  &xs {
+    @include get-gap-size($gap-size-xs);
+  }  
+  &sm {
+    @include get-gap-size($gap-size-sm);
+  }  
+  &md {
+    @include get-gap-size($gap-size-md);
+  }  
+  &lg {
+    @include get-gap-size($gap-size-lg);
+  }  
+  &xl {
+    @include get-gap-size($gap-size-xl);
+  }  
+  &2xl {
+    @include get-gap-size($gap-size-2xl);
+  }  
+  &3xl {
+    @include get-gap-size($gap-size-3xl);
+  }  
+}

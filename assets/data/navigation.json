@@ -77,6 +77,11 @@
         "id": "layout-switcher",
         "path": "layout/switcher",
         "label": "Switcher"
+      },
+      {
+        "id": "layout-grid",
+        "path": "layout/grid",
+        "label": "Grid"
       }
     ]
   }

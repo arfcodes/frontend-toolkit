@@ -1,8 +1,18 @@
 //- 00-settings/layout
 
+//- Container size
 $container-space: 5vw;
 $container-size-xs: 54rem;
 $container-size-sm: 62rem;
 $container-size-md: 70rem;
 $container-size-lg: 82rem;
 $container-size-xl: 90rem;
+
+//- Grid gap size
+$gap-size-xs: .5rem;
+$gap-size-sm: .625rem;
+$gap-size-md: 1rem;
+$gap-size-lg: 1.5rem;
+$gap-size-xl: 1.8rem;
+$gap-size-2xl: 2.5rem;
+$gap-size-3xl: 3.5rem;
