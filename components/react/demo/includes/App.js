@@ -20,6 +20,7 @@ import LayoutCover from '../pages/Layout/Cover';
 import LayoutCluster from '../pages/Layout/Cluster';
 import LayoutSwitcher from '../pages/Layout/Switcher';
 import LayoutFrame from '../pages/Layout/Frame';
+import LayoutGrid from '../pages/Layout/Grid';
 
 import styles from '../Styles.scss';
 import Menu from './Menu';
@@ -47,6 +48,7 @@ const App = () => (
             <Route path="/layout/cluster" component={LayoutCluster} />
             <Route path="/layout/switcher" component={LayoutSwitcher} />
             <Route path="/layout/frame" component={LayoutFrame} />
+            <Route path="/layout/grid" component={LayoutGrid} />
           </Switch>
         </div>
       </main>
