@@ -8,12 +8,12 @@ sidebar_position: 1
 50-components # Root directory
 └── alert
     └── _core.scss
-    └── _default_.scss
+    └── _default.scss
 ```
 
 ## Basic HTML Structure
 ```
-<div class="alert alert--sucess>
+<div class="alert alert--success">
     <div class="alert__inner">
         <div class="alert__icon">
             <div class="icon--svg">

@@ -1,0 +1,59 @@
+---
+sidebar_position: 2
+---
+import PreviewImg from './PreviewDefault.png';
+
+# Style: Default
+
+<img src={PreviewImg} alt="" style={{ maxWidth: 500 }} />
+
+## Characteristic
+1. Just a text
+2. Support left icon
+
+## Sizes
+1. 2xs
+2. xs
+3. sm
+4. md
+5. lg
+6. xl
+7. 2xl
+
+## React/Solid Component
+Location: ```components/Title```
+### Example
+```
+<Title size="md">
+    Lorem Ipsum
+</Title>
+```
+With icon
+```
+<Title 
+    size="md"
+    icon={<i className="fa fa-bell"></i>}
+>
+    Lorem Ipsum
+</Title>
+```
+With image icon 
+```
+<Title 
+    size="md"
+    icon="http://site.com/image/icon.svg"
+>
+    Lorem Ipsum
+</Title>
+```
+
+### Parameters
+| No | Parameter | Type | What it is |
+| :-| :-| :-| :-|
+| 1 | children | node | Title content |
+| 2 | size | 2xs/xs/sm/md/lg/xl/2xl | Title size, default: md |
+| 3 | uppercase | boolean | Uppercase if true |
+| 4 | center | boolean | Align text to center if true |
+| 5 | as | h1/h2/h3/h4/h5/h6 | Title html tag |
+| 6 | className | string|object |  Root classname |
+| 7 | icon | string|object|node |  Title left icon |
