@@ -1,0 +1,43 @@
+
+extends ../../includes/layout
+
+block vars
+  - var pageTitle      = 'Title - Demo Static Components';
+  - var pageName       = 'title';
+  - var bodyClass      = 'p-title';
+  - var subpath        = true;
+
+block main
+  .container.container--md
+    h1 Title Default
+    br
+    br
+
+    h2.title.title--2xs Lorem Ipsum Dolor Sit Amet
+    +text-sample-short 
+    br
+    br
+    h2.title.title--xs Lorem Ipsum Dolor Sit Amet
+    +text-sample-short 
+    br
+    br
+    h2.title.title--sm Lorem Ipsum Dolor Sit Amet
+    +text-sample-short 
+    br
+    br
+    h2.title.title--md Lorem Ipsum Dolor Sit Amet
+    +text-sample-short 
+    br
+    br
+    h2.title.title--lg Lorem Ipsum Dolor Sit Amet
+    +text-sample-short 
+    br
+    br
+    h2.title.title--xl Lorem Ipsum Dolor Sit Amet
+    +text-sample-short 
+    br
+    br
+    h2.title.title--2xl Lorem Ipsum Dolor Sit Amet
+    +text-sample-short 
+    br
+    br

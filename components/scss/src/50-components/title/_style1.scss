@@ -4,6 +4,9 @@
   position: relative;
   text-transform: uppercase;
   font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
   .title__deco {
     margin-right: 1em;
