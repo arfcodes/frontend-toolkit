@@ -69,6 +69,10 @@ const routes = [
     component: lazy(() => import('../pages/Title')),
   },
   {
+    path: '/section',
+    component: lazy(() => import('../pages/Section')),
+  },
+  {
     path: '/',
     component: lazy(() => import('../pages/Home')),
   },
