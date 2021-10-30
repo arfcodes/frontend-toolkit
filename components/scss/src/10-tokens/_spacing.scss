@@ -1,1 +1,102 @@
 //- 10-tokens/spacing
+
+.space {
+  &--2xs {
+    padding-top: $space--2xs;
+    padding-bottom: $space--2xs;
+  }
+  &--xs {
+    padding-top: $space--xs;
+    padding-bottom: $space--xs;
+  }
+  &--sm {
+    padding-top: $space--sm;
+    padding-bottom: $space--sm;
+  }
+  &--md {
+    padding-top: $space--md;
+    padding-bottom: $space--md;
+  }
+  &--lg {
+    padding-top: $space--lg;
+    padding-bottom: $space--lg;
+  }
+  &--xl {
+    padding-top: $space--xl;
+    padding-bottom: $space--xl;
+  }
+  &--2xl {
+    padding-top: $space--2xl;
+    padding-bottom: $space--2xl;
+  }
+  &--3xl {
+    padding-top: $space--3xl;
+    padding-bottom: $space--3xl;
+  }
+  &--4xl {
+    padding-top: $space--4xl;
+    padding-bottom: $space--4xl;
+  }
+
+  //- Top
+  &-t {
+    &--2xs {
+      padding-top: $space--2xs;
+    }
+    &--xs {
+      padding-top: $space--xs;
+    }
+    &--sm {
+      padding-top: $space--sm;
+    }
+    &--md {
+      padding-top: $space--md;
+    }
+    &--lg {
+      padding-top: $space--lg;
+    }
+    &--xl {
+      padding-top: $space--xl;
+    }
+    &--2xl {
+      padding-top: $space--2xl;
+    }
+    &--3xl {
+      padding-top: $space--3xl;
+    }
+    &--4xl {
+      padding-top: $space--4xl;
+    }
+  }
+
+  //- Bottom
+  &-b {
+    &--2xs {
+      padding-bottom: $space--2xs;
+    }
+    &--xs {
+      padding-bottom: $space--xs;
+    }
+    &--sm {
+      padding-bottom: $space--sm;
+    }
+    &--md {
+      padding-bottom: $space--md;
+    }
+    &--lg {
+      padding-bottom: $space--lg;
+    }
+    &--xl {
+      padding-bottom: $space--xl;
+    }
+    &--2xl {
+      padding-bottom: $space--2xl;
+    }
+    &--3xl {
+      padding-bottom: $space--3xl;
+    }
+    &--4xl {
+      padding-bottom: $space--4xl;
+    }
+  }
+}

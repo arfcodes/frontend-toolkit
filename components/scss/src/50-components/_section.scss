@@ -1,0 +1,38 @@
+//- 50-components/section.scss
+
+.section {
+  position: relative;
+
+  //- Background
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  //- Inner
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  //- Title
+  &__title {
+    margin-bottom: 2rem;
+    *:first-child {
+      margin-top: 0;
+    }
+  }
+
+  //- Main
+  &__main {
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

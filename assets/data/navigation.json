@@ -104,6 +104,12 @@
     ]
   },
   {
+    "id": "section",
+    "path": "section",
+    "label": "Section",
+    "type": "all"
+  },
+  {
     "id": "title",
     "path": "title",
     "label": "Title",
