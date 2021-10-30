@@ -57,6 +57,18 @@ const routes = [
     component: lazy(() => import('../pages/Alert')),
   },
   {
+    path: '/title/style1',
+    component: lazy(() => import('../pages/Title/Style1')),
+  },
+  {
+    path: '/title/default',
+    component: lazy(() => import('../pages/Title/Default')),
+  },
+  {
+    path: '/title',
+    component: lazy(() => import('../pages/Title')),
+  },
+  {
     path: '/',
     component: lazy(() => import('../pages/Home')),
   },
