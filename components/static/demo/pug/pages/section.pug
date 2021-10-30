@@ -1,0 +1,84 @@
+
+extends ../includes/layout
+
+block vars
+  - var pageTitle      = 'Section - Demo Static Components';
+  - var pageName       = 'section';
+  - var bodyClass      = 'p-section';
+
+//-
+//- Render buttons
+//-
+
+block main
+  .container.container--md
+    h1 Section
+  br
+  br
+
+  .container.container--md
+    h2 Default
+  br
+
+  .section.bg--muted.space--md
+    .section__inner
+      .container.container--sm
+        h2.section__title.title.title--xl First Section
+        .section__main
+          +text-sample-short 
+
+  br
+  br
+
+  .container.container--md
+    h2 Custom Content
+  br
+
+  .section.bg--muted.space--md
+    .section__inner
+      .container.container--sm
+        h2.title.title--xl First Section
+        +text-sample-short 
+
+  br
+  br
+
+  .container.container--md
+    h2 With Background
+  br
+
+  .section.space--2xl.bg--black.text--white
+    .section__bg(style="background-image: url('https://placeimg.com/1000/560/tech/grayscale'); opacity: 0.4;")
+    .section__inner
+      .container.container--sm
+        h2.title.title--xl First Section
+        +text-sample-short 
+
+  br
+  br
+
+  .container.container--md
+    h2 Set Space
+  br
+
+  .section.bg--muted.space-t--md.space-b--3xl
+    .section__inner
+      .container.container--sm
+        h2.title.title--xl First Section
+        +text-sample-short 
+
+  br
+  br
+
+  .container.container--md
+    h2 Centering Content
+  br
+
+  .section.bg--muted.space--md.text--center
+    .section__inner
+      .container.container--sm
+        h2.title.title--xl First Section
+        +text-sample-short 
+
+  br
+  br

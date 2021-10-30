@@ -41,9 +41,9 @@ const Section = (props) => {
     if (title) {
       return (
         <>
-          <div className={classNames('section__title', titleClassName)}>
+          <h2 className={classNames('section__title', titleClassName)}>
             {title}
-          </div>
+          </h2>
           <div className="section__main">{children}</div>
         </>
       );
