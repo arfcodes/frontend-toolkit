@@ -1,0 +1,29 @@
+//- 50-components/title/core
+
+.title {
+  position: relative;
+  font-weight: bold;
+  margin-top: 0;
+
+  &--with-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 1rem;
+  }
+
+  &--center {
+    text-align: center;
+
+    &.title--with-icon {
+      justify-content: center;
+    }
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+}

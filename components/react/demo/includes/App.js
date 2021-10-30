@@ -22,6 +22,10 @@ import LayoutSwitcher from '../pages/Layout/Switcher';
 import LayoutFrame from '../pages/Layout/Frame';
 import LayoutGrid from '../pages/Layout/Grid';
 
+import Title from '../pages/Title';
+import TitleDefault from '../pages/Title/Default';
+import TitleStyle1 from '../pages/Title/Style1';
+
 import styles from '../Styles.scss';
 import Menu from './Menu';
 
@@ -49,6 +53,10 @@ const App = () => (
             <Route path="/layout/switcher" component={LayoutSwitcher} />
             <Route path="/layout/frame" component={LayoutFrame} />
             <Route path="/layout/grid" component={LayoutGrid} />
+
+            <Route path="/title" component={Title} exact />
+            <Route path="/title/default" component={TitleDefault} />
+            <Route path="/title/style1" component={TitleStyle1} />
           </Switch>
         </div>
       </main>

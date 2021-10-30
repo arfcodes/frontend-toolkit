@@ -1,6 +1,14 @@
 //-
 //- COMPONENTS
 //-
+//- Icon
+@import "50-components/icon";
+
+//- Title
+@import "50-components/title/core";
+@import "50-components/title/default";
+@import "50-components/title/style1";
+
 //- Button
 @import "50-components/button/core";
 @import "50-components/button/default";
@@ -9,9 +17,6 @@
 //- Alert
 @import "50-components/alert/core";
 @import "50-components/alert/default";
-
-//- Icon
-@import "50-components/icon";
 
 //-
 //- THIRD PARTY

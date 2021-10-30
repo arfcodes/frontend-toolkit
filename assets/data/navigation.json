@@ -37,6 +37,24 @@
     ]
   },
   {
+    "id": "cta",
+    "path": "cta",
+    "label": "Call To Action",
+    "type": "all",
+    "subs": [
+      {
+        "id": "cta-default",
+        "path": "cta/default",
+        "label": "Default"
+      },
+      {
+        "id": "cta-style1",
+        "path": "cta/style1",
+        "label": "Style 1"
+      }
+    ]
+  },
+  {
     "id": "card",
     "path": "card",
     "label": "Card",
@@ -82,6 +100,24 @@
         "id": "layout-grid",
         "path": "layout/grid",
         "label": "Grid"
+      }
+    ]
+  },
+  {
+    "id": "title",
+    "path": "title",
+    "label": "Title",
+    "type": "all",
+    "subs": [
+      {
+        "id": "title-default",
+        "path": "title/default",
+        "label": "Default"
+      },
+      {
+        "id": "title-style1",
+        "path": "title/style1",
+        "label": "Style 1"
       }
     ]
   }
