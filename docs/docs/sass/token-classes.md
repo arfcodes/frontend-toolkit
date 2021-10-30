@@ -51,3 +51,16 @@ title: Token Classes
 - ```.border--warning``` -> ```$color-warning``
 - ```.border--info``` -> ```$color-info``
 
+### Spacing
+**Vertical Spacing**
+
+```.space--${size}```
+
+**Top Spacing**
+
+```.space-t--${size}```
+
+**Bottom Spacing**
+
+```.space-b--${size}```
+

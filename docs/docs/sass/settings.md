@@ -49,3 +49,14 @@ title: Settings
 - ```$gap-size-xl``` -> 1.8rem;
 - ```$gap-size-2xl``` -> 2.5rem;
 - ```$gap-size-3xl``` -> 3.5rem;
+
+### Spacing
+- ```$space-2xs``` -> 0.5rem;
+- ```$space-xs``` -> 1rem;
+- ```$space-sm``` -> 1.5rem;
+- ```$space-md``` -> 2rem;
+- ```$space-lg``` -> 2.5rem;
+- ```$space-xl``` -> 3rem;
+- ```$space-2xl``` -> 4rem;
+- ```$space-3xl``` -> 5rem;
+- ```$space-4xl``` -> 6rem;
