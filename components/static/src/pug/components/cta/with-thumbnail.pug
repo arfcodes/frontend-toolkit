@@ -1,0 +1,36 @@
+//- components/cta/with-thumbnail.pug
+
+- var thumbnail = '';
+- var thumbnailPosition = 'left';
+- var contentVerticalAlign = 'center';
+- var textAlign = 'left';
+- var space = 'md';
+- var containerSize = 'md';
+- var bgColor = 'white';
+- var bgImage = '';
+- var bgImageOpacity = 0.8;
+- var textColor = 'black';
+
+block vars
+
+div(class="section space--"+space+" bg--"+bgColor+" text--"+textColor)
+  if bgImage
+    .section__bg(style="background-image: url('"+bgImage+"'); opacity: "+bgImageOpacity+";")
+
+  .section__inner
+    div(class="container container--"+containerSize)
+      .section__main
+        div(class="cta cta--thumbnail-"+thumbnailPosition+" cta--v-align--"+contentVerticalAlign)
+          .cta__inner
+            .cta__main.row.gap--2xl
+              .cta__thumbnail.col--6
+                img(src=thumbnail alt="")
+              div(class="cta__content col--6 cta__content--"+textAlign)
+                .cta__header
+                  block header
+
+                .cta__body
+                  block body
+
+                .cta__action
+                  block action

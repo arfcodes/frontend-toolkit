@@ -1,0 +1,32 @@
+//- components/cta/sample-info-only.pug
+
+- var contentVerticalAlign = 'center';
+- var textAlign = 'left';
+- var space = 'md';
+- var containerSize = 'md';
+- var bgColor = 'white';
+- var bgImage = '';
+- var bgImageOpacity = 0.8;
+- var textColor = 'black';
+
+block vars
+
+div(class="section space--"+space+" bg--"+bgColor+" text--"+textColor)
+  if bgImage
+    .section__bg(style="background-image: url('"+bgImage+"'); opacity: "+bgImageOpacity+";")
+
+  .section__inner
+    div(class="container container--"+containerSize)
+      .section__main
+        div(class="cta"+" cta--v-align--"+contentVerticalAlign)
+          .cta__inner
+            .cta__main
+              div(class="cta__content cta__content--"+textAlign)
+                .cta__header
+                  block header
+
+                .cta__body
+                  block body
+
+                .cta__action
+                  block action

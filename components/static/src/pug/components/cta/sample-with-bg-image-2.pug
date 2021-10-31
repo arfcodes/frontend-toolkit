@@ -1,0 +1,20 @@
+extends ./with-thumbnail
+
+block vars
+  - var thumbnail = 'https://placeimg.com/600/600/tech';
+  - var bgImage = 'https://placeimg.com/1000/560/tech/grayscale';
+  - var bgImageOpacity = 0.4;
+  - var bgColor = 'black';
+  - var textColor = 'white';
+  - var space = '3xl';
+
+block header
+  h2.cta__title.title.title--md Section Number 1
+  h3.cta__subtitle.title.title--xs This is sample for section number 1 
+
+block body
+  p 
+    | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras purus lorem, tempor in magna sed, suscipit tincidunt neque. Praesent orci nisl, volutpat ut elit sit amet, tristique facilisis turpis. Mauris purus erat, vehicula at viverra ut, cursus ac erat. Nam bibendum arcu id tristique ullamcorper. Aenean non dictum eros, id consequat nunc. Praesent ac est tristique, pretium augue sit amet, malesuada sapien. Integer convallis semper metus, ac maximus est eleifend id.
+
+block action
+  a.button.button--default.button--primary.button--md(href="#") Read more

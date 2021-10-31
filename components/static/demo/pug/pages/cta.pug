@@ -1,11 +1,49 @@
-
 extends ../includes/layout
 
 block vars
   - var pageTitle      = 'Call To Action - Demo Static Components';
-  - var pageName       = 'alert';
-  - var bodyClass      = 'alert';
+  - var pageName       = 'cta';
+  - var bodyClass      = 'p-cta';
 
 block main
-  .container.container--md 
-    h2 Call To Action
+  .container.container--lg 
+    h2 CTA Info Only
+    
+  include ../../../src/pug/components/cta/sample-info-only
+  br
+  br
+
+  .container.container--lg 
+    h2 CTA With Thumbnail
+    
+  include ../../../src/pug/components/cta/sample-with-thumbnail
+  br
+  br
+
+  .container.container--lg 
+    h2 CTA With Thumbnail on Right
+    
+  include ../../../src/pug/components/cta/sample-with-thumbnail-right
+  br
+  br
+
+  .container.container--lg 
+    h2 CTA With Content on Top
+    
+  include ../../../src/pug/components/cta/sample-info-on-top
+  br
+  br
+
+  .container.container--lg 
+    h2 CTA With BG Image
+    
+  include ../../../src/pug/components/cta/sample-with-bg-image
+  br
+  include ../../../src/pug/components/cta/sample-with-bg-image-2
+  br
+  br
+
+  .container.container--lg 
+    h2 CTA With Content on Center
+    
+  include ../../../src/pug/components/cta/sample-content-center

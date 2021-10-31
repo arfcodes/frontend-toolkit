@@ -1,0 +1,76 @@
+//- 50-components/cta/core
+
+.cta {
+  position: relative;
+
+  // Responsive
+  // < 768px
+  @media (max-width: 768px) {
+    .cta__thumbnail, .cta__content {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__main {
+    align-items: center;
+  }
+
+  &__thumbnail {
+    img {
+      width: 100%;
+    }
+  }
+
+  &--v-align--top {
+    .cta__main {
+      align-items: flex-start;
+    }
+  }
+
+  &--v-align--bottom {
+    .cta__main {
+      align-items: flex-end;
+    }
+  }
+
+  &__content {
+    &--right {
+      text-align: right;
+    }
+    &--center {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin: 0;
+  }
+  &__subtitle {
+    margin-top: .5rem;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+  &__body {
+    margin-top: 2.5rem;
+
+    p {
+      &:first-child {
+        margin-top: 0;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__action {
+    margin-top: 1.75rem;
+  }
+
+  &--thumbnail-right {
+    .cta__main {
+      flex-direction: row-reverse;
+    }
+  }
+}

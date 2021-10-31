@@ -40,19 +40,7 @@
     "id": "cta",
     "path": "cta",
     "label": "Call To Action",
-    "type": "all",
-    "subs": [
-      {
-        "id": "cta-default",
-        "path": "cta/default",
-        "label": "Default"
-      },
-      {
-        "id": "cta-style1",
-        "path": "cta/style1",
-        "label": "Style 1"
-      }
-    ]
+    "type": "all"
   },
   {
     "id": "card",

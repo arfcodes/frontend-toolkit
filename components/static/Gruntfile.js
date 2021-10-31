@@ -153,12 +153,16 @@ module.exports = function (grunt) {
       script: {
         files: [
           '<%= meta.js_src %>/**/*.js',
-          'demo/js/**/*.js'
+          'demo/js/**/*.js',
+          'src/js/**/*.js'
         ],
         tasks: ['browserify'],
       },
       pug: {
-        files: ['<%= meta.pug_src %>/**/*.pug'],
+        files: [
+          '<%= meta.pug_src %>/**/*.pug',
+          'src/pug/**/*.pug'
+        ],
         tasks: ['pug'],
       },
     },

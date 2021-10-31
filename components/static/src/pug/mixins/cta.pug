@@ -1,16 +1,16 @@
 //-
 //- CTA mixin
-mixin cta(subtitle, button, infoAlign = 'middle', textAlign = 'left', imagePos = 'left')
-  - var img = '../images/cta--thumbnail.png'
-  - var title = 'Hello, we are Clove'
-  - var info = 'The first market research consultant that provide transparent data, with 100% audio checking, tailored to your need.'
-
-  div(class="cta cta--thumb-"+imagePos+" cta--align--"+infoAlign)
+mixin cta(title, info, img, subtitle, btnLabel, btnLink = '#', infoAlign = 'middle', textAlign = 'left', imagePos = 'left')
+  div(class="cta cta--thumbnail-"+imagePos+" cta--align--"+infoAlign)
     .cta__inner
-      .cta__main.grid.gap--2xl
-        .cta__thumbnail.column--50
-          img(src=img alt="")
-        div(class="cta__content column--50 cta__content--"+textAlign)
+      .cta__main.row.gap--2xl
+        if img
+          .cta__thumbnail.col--6
+            img(src=img alt="")
+        if img
+          div(class="cta__content col--6 cta__content--"+textAlign)
+        else
+          div(class="cta__content cta__content--"+textAlign)
           .cta__header
             h2.cta__title.text--3xl= title
             if subtitle
@@ -19,15 +19,15 @@ mixin cta(subtitle, button, infoAlign = 'middle', textAlign = 'left', imagePos =
           .cta__body
             p= info
 
-          if button
+          if btnLabel && btnLink
             .cta__action
-              +button-link(button, '#')
+              +button-link(button, btnLink)
             
 
 //-
 //- section CTA mixin
-mixin cta-section(subtitle, button, space='md', bgColor='primary', container='lg', infoAlign='middle', textAlign='left', imagePos='left')
-  div(class="section section--space-"+space+" bg--"+bgColor)
+mixin cta-section(title, info, img, subtitle, btnLabel, btnLink = '#', space='md', bgColor='primary', container='lg', infoAlign='middle', textAlign='left', imagePos='left')
+  div(class="section space--"+space+" bg--"+bgColor)
     .section__inner
       div(class="container container--"+container)
         .section__main
