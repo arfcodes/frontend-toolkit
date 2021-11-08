@@ -1,7 +1,6 @@
 /**
- * components/Cta/Base.js
+ * components/Cta/Base.jsx
  */
-import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
@@ -17,13 +16,15 @@ const CtaBase = (props) => {
     ...others
   } = props;
 
+  const colSize = thumbnailColSize || 6;
+
   // Get thumbnail
   const getThumbnail = () => {
     if (!thumbnail) {
       return null;
     }
     return (
-      <div className={classNames('cta__thumbnail', `col--${thumbnailColSize}`)}>
+      <div className={classNames('cta__thumbnail', `col--${colSize}`)}>
         {typeof thumbnail === 'string' ? (
           <img src={thumbnail} alt="" />
         ) : (
@@ -37,8 +38,8 @@ const CtaBase = (props) => {
     <div
       className={classNames(
         'cta',
-        `cta--v-align--${vAlign}`,
-        thumbnail ? `cta--thumbnail-${thumbnailPosition}` : '',
+        `cta--v-align--${vAlign || 'middle'}`,
+        thumbnail ? `cta--thumbnail-${thumbnailPosition || 'left'}` : '',
         className,
       )}
       {...others}
@@ -51,7 +52,7 @@ const CtaBase = (props) => {
               className={classNames(
                 'cta__content',
                 `cta__content--${textAlign}`,
-                `col--${12 - thumbnailColSize}`,
+                `col--${12 - colSize}`,
               )}
             >
               {children}
@@ -62,7 +63,7 @@ const CtaBase = (props) => {
             <div
               className={classNames(
                 'cta__content',
-                `cta__content--${textAlign}`,
+                `cta__content--${textAlign || 'left'}`,
               )}
             >
               {children}
@@ -72,13 +73,6 @@ const CtaBase = (props) => {
       </div>
     </div>
   );
-};
-
-CtaBase.defaultProps = {
-  vAlign: 'middle',
-  textAlign: 'left',
-  thumbnailPosition: 'left',
-  thumbnailColSize: 6,
 };
 
 CtaBase.propTypes = {

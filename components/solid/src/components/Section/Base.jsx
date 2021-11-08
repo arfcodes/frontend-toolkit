@@ -1,12 +1,12 @@
 /**
- * components/Section/index.jsx
+ * components/Section/Base.jsx
  */
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import Container from '../Layout/Container';
 
-const Section = (props) => {
+const SectionBase = (props) => {
   const {
     className,
     children,
@@ -14,8 +14,6 @@ const Section = (props) => {
     bg,
     bgClassName,
     bgOpacity,
-    title,
-    titleClassName,
     containerSize,
   } = props;
 
@@ -35,50 +33,33 @@ const Section = (props) => {
     classes.push('space--md');
   }
 
-  // Get section content
-  const getContent = () => {
-    if (title) {
-      return (
-        <>
-          <h2 className={classNames('section__title', titleClassName)}>
-            {title}
-          </h2>
-          <div className="section__main">{children}</div>
-        </>
-      );
-    }
-    return <>{children}</>;
-  };
-
   return (
     <div className={classNames(classes, className)}>
       {bg && (
         <div
           className={classNames('section__bg', bgClassName)}
-          style={{ 'background-image': `url(${bg})`, opacity: bgOpacity || 1 }}
+          style={{ backgroundImage: `url(${bg})`, opacity: bgOpacity || 1 }}
         ></div>
       )}
       <div className="section__inner">
         {containerSize ? (
-          <Container size={containerSize}>{getContent()}</Container>
+          <Container size={containerSize}>{children}</Container>
         ) : (
-          <>{getContent()}</>
+          <>{children}</>
         )}
       </div>
     </div>
   );
 };
 
-Section.propTypes = {
+SectionBase.propTypes = {
   children: PropTypes.node.isRequired,
   bg: PropTypes.string,
   bgOpacity: PropTypes.number,
   bgClassName: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   className: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   space: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
-  title: PropTypes.string,
-  titleClassName: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   containerSize: PropTypes.oneOf(['xs', 'sm', 'md', 'lg', 'xl']),
 };
 
-export default Section;
+export default SectionBase;

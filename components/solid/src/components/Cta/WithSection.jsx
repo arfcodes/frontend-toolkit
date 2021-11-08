@@ -1,7 +1,6 @@
 /**
- * components/Cta/WithSection.js
+ * components/Cta/WithSection.jsx
  */
-import React from 'react';
 import PropTypes from 'prop-types';
 
 import Section from '../Section/Base';
@@ -12,13 +11,6 @@ const CtaWithSection = ({ className, children, sectionProps, ...others }) => (
     <Base {...others}>{children}</Base>
   </Section>
 );
-
-CtaWithSection.defaultProps = {
-  vAlign: 'middle',
-  textAlign: 'left',
-  thumbnailColSize: 6,
-  thumbnailPosition: 'left',
-};
 
 CtaWithSection.propTypes = {
   children: PropTypes.node,

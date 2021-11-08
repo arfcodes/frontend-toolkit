@@ -1,7 +1,6 @@
 /**
- * components/Cta.js
+ * components/Cta.jsx
  */
-import React from 'react';
 import PropTypes from 'prop-types';
 
 import Base from './Base';
@@ -32,13 +31,6 @@ const Cta = (props) => {
       {action && <div className="cta__action">{action}</div>}
     </Base>
   );
-};
-
-Cta.defaultProps = {
-  vAlign: 'middle',
-  textAlign: 'left',
-  thumbnailColSize: 6,
-  thumbnailPosition: 'left',
 };
 
 Cta.propTypes = {
