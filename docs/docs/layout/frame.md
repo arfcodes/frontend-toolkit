@@ -3,7 +3,7 @@ sidebar_position: 7
 ---
 # Frame
 
-## SCSS
+## Style
 File: ```src/40-layouts/_frame_.scss```
 
 ### Token Classes

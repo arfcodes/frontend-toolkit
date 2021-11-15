@@ -3,7 +3,7 @@ sidebar_position: 6
 ---
 # Cover
 
-## SCSS
+## Style
 File: ```src/40-layouts/_cover_.scss```
 
 ## Basic HTML Structure

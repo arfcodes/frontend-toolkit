@@ -3,7 +3,7 @@ sidebar_position: 4
 ---
 # Cluster
 
-## SCSS
+## Style
 File: ```src/40-layouts/_cluster.scss```
 
 ### Token Classes

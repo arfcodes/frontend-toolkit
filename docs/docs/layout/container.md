@@ -3,7 +3,7 @@ sidebar_position: 1
 ---
 # Container
 
-## SCSS
+## Style
 File: ```src/40-layouts/_container.scss```
 
 ### Token Classes

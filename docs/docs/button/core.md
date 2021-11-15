@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
 ---
-# Core
+# Button Core
 
-## Directory
+## Style
 ```bash
 50-components # Root directory
 └── button

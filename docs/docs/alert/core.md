@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
 ---
-# Core
+# Alert Core
 
-## Directory
+## Style
 ```bash
 50-components # Root directory
 └── alert

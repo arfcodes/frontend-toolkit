@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 # Grid
 
-## SCSS
+## Style
 File: ```src/40-layouts/_grid_.scss```
 
 ### Token Classes

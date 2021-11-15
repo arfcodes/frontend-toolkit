@@ -1,0 +1,100 @@
+---
+sidebar_label: Core
+sidebar_position: 1
+---
+import PreviewImg from './Preview.png';
+
+# CTA Core
+
+<img src={PreviewImg} alt="" style={{ maxWidth: 800 }} />
+
+## Style
+### Directory
+```bash
+50-components # Root directory
+└── cta
+    └── _core.scss
+    └── *.scss
+```
+
+### Base Classes
+| No | Class | What it is |
+| :-| :-| :-|
+| 1 | .cta | Root class |
+| 2 | .cta__inner | Inner class |
+| 3 | .cta__main | Main class |
+| 4 | .cta_thumbnail | Thumbnail section class |
+| 5 | .cta_content | Content section class |
+| 6 | .cta_header | Content header class |
+| 7 | .cta_body | Content body class |
+| 8 | .cta_action | Content action class |
+
+### Setting Classes
+#### Root Classes
+| No | Class | What it is | options |
+| :-| :-| :-| :-|
+| 1 | .cta--v-align--${aligment} | Set vertical alignment of the main content | top / middle / bottom |
+| 2 | .cta--thumbnail--${position} | Set thumbnail position | left / right |
+
+#### Content Classes (.cta__content)
+| No | Class | What it is | options |
+| :-| :-| :-| :-|
+| 1 | .cta__content--${aligment} | Set text alignment of the content | left / center / right |
+
+## Basic HTML Structure
+### 1. Info Only
+```
+<div class="cta cta--v-align--center">
+    <div class="cta__inner">
+        <div class="cta__main">
+            <div class="cta__content cta__content--left">
+                <div class="cta__header">...</div>
+                <div class="cta__body">...</div>
+                <div class="cta__action">...</div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+### 2. With Thumbnail
+```
+<div class="cta cta--thumbnail-left cta--v-align--center">
+    <div class="cta__inner">
+        <div class="cta__main row gap--2xl">
+            <div class="cta__thumbnail col--6">
+                <img src="" alt="" />
+            </div>
+            <div class="cta__content col--6 cta__content--left">
+                <div class="cta__header">...</div>
+                <div class="cta__body">...</div>
+                <div class="cta__action">...</div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+### 3. With Section
+```
+<div class="section space--3xl bg--muted text--black">
+    <div class="section__inner">
+        <div class="container container--md">
+            <div class="section__main">
+                <div class="cta cta--thumbnail-left cta--v-align--center">
+                    <div class="cta__inner">
+                        <div class="cta__main row gap--2xl">
+                            <div class="cta__thumbnail col--6">
+                                <img src="" alt="" />
+                            </div>
+                            <div class="cta__content col--6 cta__content--left">
+                                <div class="cta__header">...</div>
+                                <div class="cta__body">...</div>
+                                <div class="cta__action">...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```

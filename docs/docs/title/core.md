@@ -1,9 +1,9 @@
 ---
 sidebar_position: 1
 ---
-# Core
+# Title Core
 
-## Directory
+## Style
 ```bash
 50-components # Root directory
 └── title

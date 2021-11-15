@@ -5,10 +5,10 @@ sidebar_position: 50
 
 # Section
 
-## SCSS
+## Style
 File: ```src/50-components/_section.scss```
 
-### Classes
+### Base Classes
 | No | Class | What it is |
 | :-| :-| :-|
 | 1 | .section | Root class |

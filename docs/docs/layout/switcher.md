@@ -3,7 +3,7 @@ sidebar_position: 5
 ---
 # Switcher
 
-## SCSS
+## Style
 File: ```src/40-layouts/_switcher_.scss```
 
 ### Token Classes
